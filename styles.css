@@ -18,6 +18,14 @@ nav {
     font-size: 24px;
 }
 
+header {
+    position: fixed;
+    top: 40px;
+    left:0px;
+    width: 30%;
+    font-size: 36px;
+}
+
 li {
     float: left;
     list-style: none;
