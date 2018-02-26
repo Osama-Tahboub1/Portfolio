@@ -29,6 +29,16 @@ header {
 li {
     float: left;
     list-style: none;
+    margin: 10px;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+
 }
 
 .contactIcon {
