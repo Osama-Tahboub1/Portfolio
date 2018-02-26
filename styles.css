@@ -4,7 +4,28 @@
 
 body {
     margin: 0;
-    background: url(background1.jpg);
-    background-size: cover;
+    /*background: url(background1.jpg);*/
+    /*background-size: cover;*/
     font-family: ;
+}
+
+nav {
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    width: 20%;
+    font-size: 24px;
+}
+
+li {
+    float: left;
+    list-style: none;
+}
+
+.contactIcon {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+
 }
