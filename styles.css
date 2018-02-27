@@ -12,6 +12,7 @@ body {
 .container {
     margin: 0 auto;
     overflow: auto;
+    width: 100%;
 }
 
 header {
@@ -83,6 +84,8 @@ main {
     position: absolute;
     top: 30%;
     width: 72%;
+    margin: 0 auto;
+    overflow: auto;
 }
 
 .col3 {
@@ -98,4 +101,10 @@ main {
     top: 0rem;
     left: 0rem;
     color: #000000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
