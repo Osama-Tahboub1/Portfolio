@@ -71,11 +71,14 @@ a:link {
     padding: 50px;
 }
 
-.aboutMe1 {
+.aboutMe {
     position: absolute;
     top: 30%;
-    left: 20%;
-    width: 60%;
+}
+
+section article {
+    padding:5rem;
+    width: 70%;
 }
 
 .aboutMe2{
