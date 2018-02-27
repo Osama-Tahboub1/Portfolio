@@ -51,7 +51,6 @@ a:visited {
 }
 
 a:hover {
-    border-bottom: solid;
     color: white;
 }
 
