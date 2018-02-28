@@ -140,6 +140,7 @@ main {
         position: fixed;
         top: 55%;
         right: 5px;
+        background-color: transparent;
     }
 
     section article {
