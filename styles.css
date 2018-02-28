@@ -17,10 +17,6 @@ body {
     width: 100%;
 }
 
-header {
-    background-color: transparent;
-}
-
 nav {
     position:fixed;
     top: 0px;
@@ -66,7 +62,8 @@ a:link {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: transparent;
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 1);
 }
 
 .contactIcon a {
@@ -88,7 +85,6 @@ section article {
     width: 75%;
     font-size: 24px;
     background-color: rgba(128, 128, 128, 0.5);
-    z-index: 3;
 }
 
 main {
@@ -114,12 +110,6 @@ main {
     top: 0rem;
     left: 0rem;
     color: #ffffff;
-}
-
-footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
 }
 
 @media screen and (max-width: 1080px){
