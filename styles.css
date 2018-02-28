@@ -120,13 +120,20 @@ footer {
         padding: 1rem;
         font-size: 2rem;
 }
+    header h1 {
+        padding: 1rem;
+    }
 
     .contactIcon {
         position: fixed;
-        top: 50%;
+        top: 55%;
         right: 10px;
     }
 
+    section article {
+        padding:1rem 1rem;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 540px){
@@ -136,16 +143,32 @@ footer {
     }
 
     header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    ul {
+        padding: 0px;
     }
 
     .contactIcon {
         position: fixed;
         top: 25%;
-        right: 10px;
+        right: 5px;
     }
 
+    section article {
+        font-size: 10px;
+        padding: 3px;
+
+    }
+
+    .aboutMe {
+        position: absolute;
+        top: 10%;
+    }
 }
+
+
 
 
 
