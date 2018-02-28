@@ -7,7 +7,8 @@ body {
     background: url(assets/background1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Helvetica;
+    w3-sepia: 50%;
+    font-family: Serif;
     color: #ffffff;
 }
 
@@ -26,7 +27,7 @@ nav {
     top: 0px;
     right: 0px;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 header h1 {
@@ -34,7 +35,7 @@ header h1 {
     top: 40px;
     left: 0px;
     padding: 1rem;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 li {
@@ -53,7 +54,7 @@ a:visited {
 }
 
 a:hover {
-    color: white;
+    opacity: 0.75;
 }
 
 a:link {
@@ -84,6 +85,7 @@ a:link {
 section article {
     padding:2rem 5rem;
     width: 70%;
+    font-size: 24px;
 }
 
 main {
@@ -193,7 +195,7 @@ footer {
     }
 
     .col2 img {
-    display: none;
+        display: none;
     }
 
     .col2 {
