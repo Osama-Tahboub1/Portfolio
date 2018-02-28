@@ -53,11 +53,18 @@ a:visited {
 }
 
 a:hover {
-    opacity: 0.75;
+    border-bottom: solid;
+    border-color: #ffffff;
 }
 
 a:link {
     text-decoration: none;
+}
+
+h1 a {
+    position: absolute;
+    right: 0px;
+    padding: 50px 600px;
 }
 
 .contactIcon {
