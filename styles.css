@@ -5,8 +5,10 @@
 body {
     margin: 0;
     background: url(assets/background1.jpeg);
+    background-repeat: no-repeat;
     background-size: cover;
-    font-family: ;
+    font-family: Helvetica;
+    color: #ffffff;
 }
 
 .container {
@@ -42,12 +44,12 @@ li {
 }
 
 a {
-    color: black;
+    color: #ffffff;
 }
 
 a:visited {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
 }
 
 a:hover {
@@ -83,7 +85,7 @@ section article {
 main {
     position: absolute;
     top: 30%;
-    width: 72%;
+    width: 70%;
     margin: 0 auto;
     overflow: auto;
 }
@@ -100,7 +102,7 @@ main {
     position: relative;
     top: 0rem;
     left: 0rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 footer {
@@ -108,3 +110,21 @@ footer {
     bottom: 0px;
     left: 0px;
 }
+
+@media screen and (max-width: 2732px){
+
+
+
+
+}
+
+@media screen and (max-width: 1080px){
+
+    .contactIcon {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/*Width was taken from most popular devices on screensize.es for tablet and phone*/
