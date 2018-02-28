@@ -32,7 +32,7 @@ nav {
 header h1 {
     position: fixed;
     top: 40px;
-    left:0px;
+    left: 0px;
     padding: 1rem;
     font-size: 5rem;
 }
@@ -113,18 +113,39 @@ footer {
 
 @media screen and (max-width: 1080px){
 
+    nav {
+        position:fixed;
+        top: 0px;
+        left: 0px;
+        padding: 1rem;
+        font-size: 2rem;
+}
 
-
+    .contactIcon {
+        position: fixed;
+        top: 50%;
+        right: 10px;
+    }
 
 }
 
 @media screen and (max-width: 540px){
 
+    nav {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
     .contactIcon {
         position: fixed;
-        top: 10px;
-        left: 10px;
+        top: 25%;
+        right: 10px;
     }
+
 }
 
-/*Width was taken from most popular devices on screensize.es for tablet and phone*/
+
+
