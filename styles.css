@@ -72,6 +72,10 @@ a:link {
     padding: 50px;
 }
 
+.contactIconSmall {
+    display: none;
+}
+
 .aboutMe {
     position: absolute;
     top: 30%;
@@ -125,6 +129,7 @@ footer {
     }
 
     .contactIcon {
+        display: block;
         position: fixed;
         top: 55%;
         right: 10px;
@@ -138,6 +143,7 @@ footer {
     main {
         top: 20%;
     }
+
 }
 
 @media screen and (max-width: 540px){
@@ -155,10 +161,21 @@ footer {
     }
 
     .contactIcon {
+        display: none;
+    }
+
+    .contactIconSmall {
+        display: block;
         position: fixed;
         top: 25%;
         right: 5px;
     }
+
+    .contactIconSmall a {
+        position: absolute;
+        padding: 25px;
+    }
+
 
     section article {
         font-size: 10px;
