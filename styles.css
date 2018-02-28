@@ -137,14 +137,22 @@ footer {
         padding: 1rem;
         font-size: 2rem;
 }
+    header h1 {
+        display:none;
+    }
+
+    .homePageTitle {
+        display: block;
+        font-size: 5rem;
+        padding: 3rem;
+    }
+
+    .homePageTitle a {
+        padding: 50px 300px;
+    }
 
     li {
     padding: 0px 5px;
-    }
-
-    header h1 {
-        padding: 1rem;
-        font-size: 5rem;
     }
 
     .contactIcon {
@@ -188,9 +196,8 @@ footer {
     }
 
     .homePageTitle a {
-        padding: 20px 600px;
+        padding: 20px 140px;
     }
-
 
     .contactIcon {
         display: none;
