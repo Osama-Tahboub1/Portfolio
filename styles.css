@@ -7,7 +7,6 @@ body {
     background: url(assets/background1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    w3-sepia: 50%;
     font-family: Serif;
     color: #ffffff;
 }
@@ -84,8 +83,10 @@ a:link {
 
 section article {
     padding:2rem 5rem;
-    width: 70%;
+    width: 75%;
     font-size: 24px;
+    background-color: rgba(128, 128, 128, 0.5);
+    z-index: 3;
 }
 
 main {
@@ -94,6 +95,8 @@ main {
     width: 70%;
     margin: 0 auto;
     overflow: auto;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 2em;
 }
 
 .col3 {
@@ -101,7 +104,7 @@ main {
     height: 15rem;
     float: left;
     overflow: hidden;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .col3 a {
@@ -128,22 +131,29 @@ footer {
 }
     header h1 {
         padding: 1rem;
+        font-size: 5rem;
     }
 
     .contactIcon {
         display: block;
         position: fixed;
         top: 55%;
-        right: 10px;
+        right: 5px;
     }
 
     section article {
         padding:1rem 1rem;
         width: 80%;
+        font-size: 1rem;
     }
 
     main {
         top: 20%;
+        padding: 10px;
+    }
+
+    .col3 {
+        padding: 1rem;
     }
 
 }
