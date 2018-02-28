@@ -111,14 +111,14 @@ footer {
     left: 0px;
 }
 
-@media screen and (max-width: 2732px){
+@media screen and (max-width: 1080px){
 
 
 
 
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 540px){
 
     .contactIcon {
         position: fixed;
