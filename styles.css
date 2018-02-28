@@ -62,12 +62,6 @@ a:link {
     text-decoration: none;
 }
 
-h1 a {
-    position: absolute;
-    right: 0px;
-    padding: 50px 600px;
-}
-
 .contactIcon {
     position: fixed;
     bottom: 10px;
@@ -147,10 +141,6 @@ footer {
         padding: 3rem;
     }
 
-    .homePageTitle a {
-        padding: 50px 300px;
-    }
-
     li {
     padding: 0px 5px;
     }
@@ -193,10 +183,6 @@ footer {
     .homePageTitle {
         display: block;
         font-size: 2rem;
-    }
-
-    .homePageTitle a {
-        padding: 20px 140px;
     }
 
     .contactIcon {
