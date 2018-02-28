@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url(assets/background1.jpeg);
+    background-size: cover;
+    font-family: ;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: auto;
+    width: 100%;
+}
+
+header {
+    background-color: transparent;
+}
+
+nav {
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+header h1 {
+    position: fixed;
+    top: 40px;
+    left:0px;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.contactIcon {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+}
+
+.contactIcon a {
+    position: absolute;
+    padding: 50px;
+}
+
+.aboutMe {
+    position: absolute;
+    top: 30%;
+}
+
+section article {
+    padding:2rem 5rem;
+    width: 70%;
+}
+
+main {
+    position: absolute;
+    top: 30%;
+    width: 72%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.col3 {
+    width: 33.3%;
+    height: 15rem;
+    float: left;
+    overflow: hidden;
+    padding: 4rem;
+}
+
+.col3 a {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    color: #000000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
