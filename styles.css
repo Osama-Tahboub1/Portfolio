@@ -63,7 +63,7 @@ a:link {
     bottom: 10px;
     right: 10px;
     padding: 1rem;
-    background-color: rgba(128, 128, 128, 1);
+    background-color: rgba(128, 128, 128, 0.75);
 }
 
 .contactIcon a {
@@ -128,7 +128,8 @@ main {
     .homePageTitle {
         display: block;
         font-size: 5rem;
-        padding: 3rem;
+        padding: 3rem 3rem 1rem 3rem;
+        border-bottom: solid;
     }
 
     li {
