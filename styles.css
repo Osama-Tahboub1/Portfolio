@@ -17,10 +17,6 @@ body {
     width: 100%;
 }
 
-header {
-    background-color: transparent;
-}
-
 nav {
     position:fixed;
     top: 0px;
@@ -62,17 +58,12 @@ a:link {
     text-decoration: none;
 }
 
-h1 a {
-    position: absolute;
-    right: 0px;
-    padding: 50px 600px;
-}
-
 .contactIcon {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: transparent;
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.75);
 }
 
 .contactIcon a {
@@ -94,7 +85,6 @@ section article {
     width: 75%;
     font-size: 24px;
     background-color: rgba(128, 128, 128, 0.5);
-    z-index: 3;
 }
 
 main {
@@ -122,12 +112,6 @@ main {
     color: #ffffff;
 }
 
-footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-}
-
 @media screen and (max-width: 1080px){
 
     nav {
@@ -144,11 +128,8 @@ footer {
     .homePageTitle {
         display: block;
         font-size: 5rem;
-        padding: 3rem;
-    }
-
-    .homePageTitle a {
-        padding: 50px 300px;
+        padding: 3rem 3rem 1rem 3rem;
+        border-bottom: solid;
     }
 
     li {
@@ -160,6 +141,7 @@ footer {
         position: fixed;
         top: 55%;
         right: 5px;
+        background-color: transparent;
     }
 
     section article {
@@ -193,10 +175,6 @@ footer {
     .homePageTitle {
         display: block;
         font-size: 2rem;
-    }
-
-    .homePageTitle a {
-        padding: 20px 140px;
     }
 
     .contactIcon {
