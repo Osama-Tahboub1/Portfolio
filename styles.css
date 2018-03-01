@@ -71,6 +71,11 @@ a:link {
     padding: 50px;
 }
 
+.contactIcon span,
+.contactIconSmall span {
+    display: none;
+}
+
 .contactIconSmall {
     display: none;
 }
@@ -112,6 +117,24 @@ main {
     color: #ffffff;
 }
 
+.ieLegacy .contactIcon img,
+.ieLegacy .contactIconSmall img {
+    display: none;
+}
+
+.ieLegacy .contactIcon a,
+.ieLegacy .contactIconSmall a {
+    position: static;
+}
+
+.ieLegacy .contactIcon span,
+.ieLegacy .contactIconSmall span {
+    display: inline;
+    font-size: 1rem;
+    position: absolute;
+}
+
+
 @media screen and (max-width: 1080px){
 
     nav {
@@ -139,7 +162,7 @@ main {
     .contactIcon {
         display: block;
         position: fixed;
-        top: 55%;
+        top: 53%;
         right: 5px;
         background-color: transparent;
     }
