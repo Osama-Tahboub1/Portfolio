@@ -71,6 +71,10 @@ a:link {
     padding: 50px;
 }
 
+.contactIcon span {
+    display: 0;
+}
+
 .contactIconSmall {
     display: none;
 }

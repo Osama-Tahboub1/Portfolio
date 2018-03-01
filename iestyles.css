@@ -1,0 +1,7 @@
+.contactIcon img{
+    display: 0;
+}
+
+.contactIcon span {
+    display: inline;
+}
