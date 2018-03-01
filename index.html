@@ -5,32 +5,52 @@
     <title>Osama's Portfolio</title>
     <link type="text/css" rel="stylesheet" href="normalize.css">
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <!--[if gte IE 9 ]> <link type="text/css" rel="stylesheet" href="iestyles.css"><![endif]-->
+    <!--[if gt IE8]>
+        <style>
+            .ie img {
+                display: none;
+            }
+
+            .ie span {
+                display: inline;
+                font-size: 2rem;
+            }
+        </style>
+    <![endif]-->
+
+    <!--[if gt IE9]>
+        <style>
+            .ie a {
+                position: static;
+            }
+        </style>
+    <![endif]-->
 </head>
 <body>
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+<header class="container">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
 
-        <h1 class="homePageTitle">Osama's Portfolio</h1>
-    </header>
+    <h1 class="homePageTitle">Osama's Portfolio</h1>
+</header>
 
-    <footer class="container">
-        <div class="contactIcon">
-            <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
-            <img src="assets/contactWhite.png" alt="Email me Icon">
-        </div>
+<footer class="container">
+    <div class="contactIcon ie">
+        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
+        <span>Contact me</span>
+        <img src="assets/contactWhite.png" alt="Email me Icon">
+    </div>
 
-        <div class="contactIconSmall">
-            <span>Contact me</span>
-            <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
-            <img src="assets/contactWhiteSmall.png" alt="Email me Icon">
-        </div>
-    </footer>
+    <div class="contactIconSmall ie">
+        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
+        <span>Contact me</span>
+        <img src="assets/contactWhiteSmall.png" alt="Email me Icon">
+    </div>
+</footer>
 </body>
 </html>

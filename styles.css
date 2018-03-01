@@ -71,8 +71,9 @@ a:link {
     padding: 50px;
 }
 
-.contactIcon span {
-    display: 0;
+.contactIcon span,
+.contactIconSmall span {
+    display: none;
 }
 
 .contactIconSmall {
