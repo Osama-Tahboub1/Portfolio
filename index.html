@@ -5,28 +5,11 @@
     <title>Osama's Portfolio</title>
     <link type="text/css" rel="stylesheet" href="normalize.css">
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <!--[if gt IE8]>
-        <style>
-            .ie img {
-                display: none;
-            }
-
-            .ie span {
-                display: inline;
-                font-size: 2rem;
-            }
-        </style>
-    <![endif]-->
-
-    <!--[if gt IE9]>
-        <style>
-            .ie a {
-                position: static;
-            }
-        </style>
-    <![endif]-->
 </head>
-<body>
+
+<!--[if lte IE 11]><body class="ieLegacy"><![endif]-->
+<!--[if !IE]><body><![endif]-->
+
 <header class="container">
     <nav>
         <ul>
@@ -40,15 +23,15 @@
 </header>
 
 <footer class="container">
-    <div class="contactIcon ie">
-        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
+    <div class="contactIcon">
         <span>Contact me</span>
+        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
         <img src="assets/contactWhite.png" alt="Email me Icon">
     </div>
 
-    <div class="contactIconSmall ie">
-        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
+    <div class="contactIconSmall">
         <span>Contact me</span>
+        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
         <img src="assets/contactWhiteSmall.png" alt="Email me Icon">
     </div>
 </footer>
