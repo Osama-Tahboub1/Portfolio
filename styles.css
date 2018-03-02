@@ -4,10 +4,10 @@
 
 body {
     margin: 0;
-    background: url(assets/background1.jpeg);
+    background: url("assets/background1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Serif;
+    font-family: serif;
     color: #ffffff;
 }
 
@@ -19,8 +19,8 @@ body {
 
 nav {
     position:fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     font-size: 3rem;
     background-color: rgba(128, 128, 128, 0.5);
 }
@@ -28,7 +28,7 @@ nav {
 header h1 {
     position: fixed;
     top: 40px;
-    left: 0px;
+    left: 0;
     padding: 1rem;
     font-size: 6rem;
 }
@@ -86,7 +86,7 @@ a:link {
 }
 
 section article {
-    padding:2rem 5rem;
+    padding: 2rem 5rem;
     width: 75%;
     font-size: 24px;
     background-color: rgba(128, 128, 128, 0.5);
@@ -168,7 +168,7 @@ main {
     }
 
     section article {
-        padding:1rem 1rem;
+        padding: 1rem 1rem;
         width: 80%;
         font-size: 1rem;
     }
@@ -232,15 +232,15 @@ main {
         top: 15%;
     }
 
-    .col2 img {
+    .col2Sm img {
         display: none;
     }
 
-    .col2 h2 {
+    .col2Sm h2 {
         font-size: 1rem;
     }
 
-    .col2 {
+    .col2Sm {
         padding: 0rem 1rem;
         height: 5rem
     }
