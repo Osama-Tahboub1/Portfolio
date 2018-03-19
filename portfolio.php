@@ -11,9 +11,9 @@ $projectTitleLinkQuery = $db->prepare("SELECT `projectTitleLink` FROM `portfolio
 $projectTitleLinkQuery->execute();
 $projectTitleLink = $projectTitleLinkQuery->fetchAll();
 
-$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio``");
+$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio`");
 $projectImageQuery->execute();
-$projectImage = $projectTitleLinkQuery->fetchAll();
+$projectImage = $projectImageQuery->fetchAll();
 
 ?>
 
@@ -45,57 +45,45 @@ $projectImage = $projectTitleLinkQuery->fetchAll();
 
         <main>
             <div class="col3 col2Sm">
-                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">
-                        <?php
-                        echo $projectTitle[0]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[0]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[0]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[0]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">
-                        <?php
-                        echo $projectTitle[1]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[1]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[1]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[1]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">
-                        <?php
-                        echo $projectTitle[2]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[2]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[2]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[2]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">
-                        <?php
-                        echo $projectTitle[3]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[3]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[3]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[3]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">
-                        <?php
-                        echo $projectTitle[4]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[4]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[4]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[4]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">
-                        <?php
-                        echo $projectTitle[5]['projectTitle'];
-                        ?>
+                <h2><a href="<?php echo $projectTitleLink[5]['projectTitleLink'];?>">
+                        <?php echo $projectTitle[5]['projectTitle'];?>
                     </a></h2>
-                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+                <img src="<?php echo $projectImage[5]['projectImage'];?>">
             </div>
         </main>
 
