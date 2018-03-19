@@ -1,3 +1,30 @@
+<?php
+
+$db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$contactIconQuery = $db->prepare("SELECT `contactIcon` FROM `footer`");
+$contactIconQuery->execute();
+$contactIcon = $contactIconQuery->fetchAll();
+
+$contactEmailQuery = $db->prepare("SELECT `contactEmail` FROM `footer`");
+$contactEmailQuery->execute();
+$contactEmail = $contactEmailQuery->fetchAll();
+
+$emailSubjectQuery = $db->prepare("SELECT `emailSubject` FROM `footer`");
+$emailSubjectQuery->execute();
+$emailSubject = $emailSubjectQuery->fetchAll();
+
+$adminLoginIconQuery = $db->prepare("SELECT `adminLoginIcon` FROM `footer`");
+$adminLoginIconQuery->execute();
+$adminLoginIcon = $adminLoginIconQuery->fetchAll();
+
+$adminLoginLinkQuery = $db->prepare("SELECT `adminLoginLink` FROM `footer`");
+$adminLoginLinkQuery->execute();
+$adminLoginLink = $adminLoginLinkQuery->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -31,7 +58,7 @@
 
     <div class="contactIconSmall">
         <span>Contact me</span>
-        <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
+        <a href="mailto:o.tahboob2000@gmail.com?Subject=&quot; &quot;"></a>
         <img src="assets/contactWhiteSmall.png" alt="Email me icon">
     </div>
 </footer>
