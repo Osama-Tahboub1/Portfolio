@@ -15,6 +15,30 @@ $projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio`");
 $projectImageQuery->execute();
 $projectImage = $projectImageQuery->fetchAll();
 
+$contactIconQuery = $db->prepare("SELECT `contactIcon` FROM `footer`");
+$contactIconQuery->execute();
+$contactIcon = $contactIconQuery->fetchAll();
+
+$smallContactIconQuery = $db->prepare("SELECT `smallContactIcon` FROM `footer`");
+$smallContactIconQuery->execute();
+$smallContactIcon = $smallContactIconQuery->fetchAll();
+
+$contactEmailQuery = $db->prepare("SELECT `contactEmail` FROM `footer`");
+$contactEmailQuery->execute();
+$contactEmail = $contactEmailQuery->fetchAll();
+
+$emailSubjectQuery = $db->prepare("SELECT `emailSubject` FROM `footer`");
+$emailSubjectQuery->execute();
+$emailSubject = $emailSubjectQuery->fetchAll();
+
+$adminLoginIconQuery = $db->prepare("SELECT `adminLoginIcon` FROM `footer`");
+$adminLoginIconQuery->execute();
+$adminLoginIcon = $adminLoginIconQuery->fetchAll();
+
+$adminLoginLinkQuery = $db->prepare("SELECT `adminLoginLink` FROM `footer`");
+$adminLoginLinkQuery->execute();
+$adminLoginLink = $adminLoginLinkQuery->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -90,14 +114,14 @@ $projectImage = $projectImageQuery->fetchAll();
         <footer class="container">
             <div class="contactIcon">
                 <span>Contact me</span>
-                <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
-                <img src="assets/contactWhite.png" alt="Email me icon">
+                <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
+                <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
             </div>
 
             <div class="contactIconSmall">
                 <span>Contact me</span>
-                <a href="mailto:o.tahboob2000@gmail.com?Subject=Portfolio%20Query"></a>
-                <img src="assets/contactWhiteSmall.png" alt="Email me icon">
+                <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
+                <img src="<?php echo $smallContactIcon[0]['smallContactIcon'];?>" alt="Email me icon">
             </div>
         </footer>
     </div>
