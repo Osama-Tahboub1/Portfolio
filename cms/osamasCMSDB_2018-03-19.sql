@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: osamasCMSDB
-# Generation Time: 2018-03-19 14:28:23 +0000
+# Generation Time: 2018-03-19 16:41:46 +0000
 # ************************************************************
 
 
@@ -51,18 +51,19 @@ DROP TABLE IF EXISTS `footer`;
 CREATE TABLE `footer` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `contactIcon` varchar(500) DEFAULT '',
-  `contactEmail` varchar(50) DEFAULT NULL,
+  `contactEmail` varchar(500) DEFAULT NULL,
   `adminLoginLink` varchar(500) DEFAULT NULL,
   `adminLoginIcon` varchar(500) DEFAULT NULL,
+  `emailSubject` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `footer` WRITE;
 /*!40000 ALTER TABLE `footer` DISABLE KEYS */;
 
-INSERT INTO `footer` (`id`, `contactIcon`, `contactEmail`, `adminLoginLink`, `adminLoginIcon`)
+INSERT INTO `footer` (`id`, `contactIcon`, `contactEmail`, `adminLoginLink`, `adminLoginIcon`, `emailSubject`)
 VALUES
-	(1,'https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/contactWhite.png','mailto:o.tahboob2000@gmail.com',NULL,NULL);
+	(1,'https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/contactWhite.png','o.tahboob2000@gmail.com',NULL,NULL,'Portfolio Query');
 
 /*!40000 ALTER TABLE `footer` ENABLE KEYS */;
 UNLOCK TABLES;
