@@ -27,7 +27,7 @@ $result = $query->fetchAll();
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
             </ul>
         </nav>
 
