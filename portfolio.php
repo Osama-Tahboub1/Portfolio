@@ -7,6 +7,13 @@ $projectTitleQuery = $db->prepare("SELECT `projectTitle` FROM `portfolio`");
 $projectTitleQuery->execute();
 $projectTitle = $projectTitleQuery->fetchAll();
 
+$projectTitleLinkQuery = $db->prepare("SELECT `projectTitleLink` FROM `portfolio`");
+$projectTitleLinkQuery->execute();
+$projectTitleLink = $projectTitleLinkQuery->fetchAll();
+
+$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio``");
+$projectImageQuery->execute();
+$projectImage = $projectTitleLinkQuery->fetchAll();
 
 ?>
 
