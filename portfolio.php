@@ -1,3 +1,14 @@
+<?php
+
+$db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$query = $db->prepare("SELECT `projectTitle` FROM `portfolio`");
+$query->execute();
+$result = $query->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,27 +37,56 @@
 
         <main>
             <div class="col3 col2Sm">
-                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">Pilot Shop</a></h2>
+                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">
+                        <?php
+                        echo $result[0]['projectTitle'];
+                        ?>
+                    </a></h2>
                 <img src="assets/PilotShop.png" alt="Portfolio sample image">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">Pilot Shop</a></h2>
+                <h2><a href="https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/">
+                        <?php
+                        echo $result[1]['projectTitle'];
+                        ?>
+                    </a></h2>
                 <img src="assets/PilotShop.png" alt="Portfolio sample image">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">Pilot Shop</a></h2>
+                <h2><a href="#">
+                        <?php
+                        echo $result[2]['projectTitle'];
+                        ?>
+                    </a></h2>
                 <img src="assets/PilotShop.png" alt="Portfolio sample image">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">Pilot Shop</a></h2>
+                <h2><a href="#">
+                        <?php
+                        echo $result[3]['projectTitle'];
+                        ?>
+                    </a></h2>
                 <img src="assets/PilotShop.png" alt="Portfolio sample image">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="#">Pilot Shop</a></h2>
+                <h2><a href="#">
+                        <?php
+                        echo $result[4]['projectTitle'];
+                        ?>
+                    </a></h2>
+                <img src="assets/PilotShop.png" alt="Portfolio sample image">
+            </div>
+
+            <div class="col3 col2Sm">
+                <h2><a href="#">
+                        <?php
+                        echo $result[5]['projectTitle'];
+                        ?>
+                    </a></h2>
                 <img src="assets/PilotShop.png" alt="Portfolio sample image">
             </div>
         </main>
