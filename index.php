@@ -58,8 +58,8 @@ $adminLoginLink = $adminLoginLinkQuery->fetchAll();
 
     <div class="contactIconSmall">
         <span>Contact me</span>
-        <a href="mailto:o.tahboob2000@gmail.com?Subject=&quot; &quot;"></a>
-        <img src="assets/contactWhiteSmall.png" alt="Email me icon">
+        <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
+        <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
     </div>
 </footer>
 </body>
