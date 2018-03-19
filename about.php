@@ -1,3 +1,14 @@
+<?php
+
+$db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$query = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
+$query->execute();
+$result = $query->fetchAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +27,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
             </ul>
         </nav>
 
@@ -26,10 +37,12 @@
     <section class="container aboutMe">
         <article>
             <p>
-                I am currently attending Mayden Academy to become a full stack developer using HTML, CSS, Java Script, PHP, SQL and Node.js.
-            </p>
-            <p>
-                Other interests are back end development using ASP.net and C#.
+                <?php
+                foreach ($result as $value) {
+                    echo $value[aboutMeArticle];
+                    echo '<p></p>';
+                }
+                ?>
             </p>
         </article>
     </section>
