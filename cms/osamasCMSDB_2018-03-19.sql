@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: osamasCMSDB
-# Generation Time: 2018-03-19 13:32:22 +0000
+# Generation Time: 2018-03-19 14:28:23 +0000
 # ************************************************************
 
 
@@ -36,7 +36,8 @@ LOCK TABLES `aboutMe` WRITE;
 
 INSERT INTO `aboutMe` (`id`, `aboutMeArticle`)
 VALUES
-	(1,'I am currently attending Mayden Academy to become a full stack developer using HTML, CSS, Java Script, PHP, SQL and Node.js.\n\nOther interests are back end development using ASP.net and C#.');
+	(1,'I am currently attending Mayden Academy to become a full stack developer using HTML, CSS, Java Script, PHP, SQL and Node.js.'),
+	(2,'Other interests are back end development using ASP.net and C#.');
 
 /*!40000 ALTER TABLE `aboutMe` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -49,10 +50,10 @@ DROP TABLE IF EXISTS `footer`;
 
 CREATE TABLE `footer` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `contactIcon` varchar(50) DEFAULT '',
+  `contactIcon` varchar(500) DEFAULT '',
   `contactEmail` varchar(50) DEFAULT NULL,
-  `adminLoginLink` varchar(50) DEFAULT NULL,
-  `adminLoginIcon` varchar(50) DEFAULT NULL,
+  `adminLoginLink` varchar(500) DEFAULT NULL,
+  `adminLoginIcon` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,7 +62,7 @@ LOCK TABLES `footer` WRITE;
 
 INSERT INTO `footer` (`id`, `contactIcon`, `contactEmail`, `adminLoginLink`, `adminLoginIcon`)
 VALUES
-	(1,'http://192.168.20.20/portfolio/assets/contactWhite','mailto:o.tahboob2000@gmail.com',NULL,NULL);
+	(1,'https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/contactWhite.png','mailto:o.tahboob2000@gmail.com',NULL,NULL);
 
 /*!40000 ALTER TABLE `footer` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -76,20 +77,21 @@ CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `projectTitle` varchar(50) DEFAULT NULL,
   `projectImage` varchar(500) DEFAULT NULL,
+  `projectTitleLink` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `portfolio` WRITE;
 /*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
 
-INSERT INTO `portfolio` (`id`, `projectTitle`, `projectImage`)
+INSERT INTO `portfolio` (`id`, `projectTitle`, `projectImage`, `projectTitleLink`)
 VALUES
-	(1,'Pilot Shop','http://192.168.20.20/portfolio/assets/PilotShop.png'),
-	(2,'CMS Project','http://192.168.20.20/portfolio/assets/PilotShop.png'),
-	(3,'New Project','http://192.168.20.20/portfolio/assets/PilotShop.png'),
-	(4,'New Project','http://192.168.20.20/portfolio/assets/PilotShop.png'),
-	(5,'New Project','http://192.168.20.20/portfolio/assets/PilotShop.png'),
-	(6,'New Project','http://192.168.20.20/portfolio/assets/PilotShop.png');
+	(1,'Pilot Shop','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/'),
+	(2,'CMS Project','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/'),
+	(3,'New Project','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/'),
+	(4,'New Project','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/'),
+	(5,'New Project','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/'),
+	(6,'New Project','https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png','https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/');
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
