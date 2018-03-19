@@ -25,7 +25,7 @@ $result = $query->fetchAll();
     <header class="container">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="portfolio.php">Portfolio</a></li>
             </ul>

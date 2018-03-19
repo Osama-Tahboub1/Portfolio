@@ -34,7 +34,7 @@ $projectImage = $projectImageQuery->fetchAll();
         <header class="container">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="#">Portfolio</a></li>
                 </ul>
