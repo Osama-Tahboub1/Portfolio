@@ -68,7 +68,7 @@ function returnParagraph(array $array): string{
 function returnProjectTitle(array $array): string{
     $paragraph = '';
     foreach ($array as $value) {
-        $paragraph .=$value['projectTitle'];
+        $paragraph .="<p>".$value['projectTitle']."</p>";
     }
     return $paragraph;
 }
@@ -83,7 +83,7 @@ function returnProjectTitle(array $array): string{
 function returnProjectTitleLink(array $array): string{
     $paragraph = '';
     foreach ($array as $value) {
-        $paragraph .= $value['projectTitleLink'];
+        $paragraph .= "<p>".$value['projectTitleLink']."</p>";
     }
     return $paragraph;
 }
