@@ -3,9 +3,9 @@
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$query = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
-$query->execute();
-$result = $query->fetchAll();
+$aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
+$aboutMeArticleQuery->execute();
+$aboutMeArticle = $aboutMeArticleQuery->fetchAll();
 
 $contactIconQuery = $db->prepare("SELECT `contactIcon` FROM `footer`");
 $contactIconQuery->execute();
@@ -76,7 +76,7 @@ function insertParagraph(array $array): string{
         <article>
             <p>
                 <?php
-                echo insertParagraph($result);
+                echo insertParagraph($aboutMeArticle);
                 ?>
             </p>
         </article>
