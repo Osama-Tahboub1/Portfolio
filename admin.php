@@ -1,3 +1,48 @@
+<?php
+
+$db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
+$aboutMeArticleQuery->execute();
+$aboutMeArticle = $aboutMeArticleQuery->fetchAll();
+
+$projectTitleQuery = $db->prepare("SELECT `projectTitle` FROM `portfolio`");
+$projectTitleQuery->execute();
+$projectTitle = $projectTitleQuery->fetchAll();
+
+$projectTitleLinkQuery = $db->prepare("SELECT `projectTitleLink` FROM `portfolio`");
+$projectTitleLinkQuery->execute();
+$projectTitleLink = $projectTitleLinkQuery->fetchAll();
+
+$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio`");
+$projectImageQuery->execute();
+$projectImage = $projectImageQuery->fetchAll();
+
+$contactIconQuery = $db->prepare("SELECT `contactIcon` FROM `footer`");
+$contactIconQuery->execute();
+$contactIcon = $contactIconQuery->fetchAll();
+
+$smallContactIconQuery = $db->prepare("SELECT `smallContactIcon` FROM `footer`");
+$smallContactIconQuery->execute();
+$smallContactIcon = $smallContactIconQuery->fetchAll();
+
+$contactEmailQuery = $db->prepare("SELECT `contactEmail` FROM `footer`");
+$contactEmailQuery->execute();
+$contactEmail = $contactEmailQuery->fetchAll();
+
+$emailSubjectQuery = $db->prepare("SELECT `emailSubject` FROM `footer`");
+$emailSubjectQuery->execute();
+$emailSubject = $emailSubjectQuery->fetchAll();
+
+$adminLoginIconQuery = $db->prepare("SELECT `adminLoginIcon` FROM `footer`");
+$adminLoginIconQuery->execute();
+$adminLoginIcon = $adminLoginIconQuery->fetchAll();
+
+$adminLoginLinkQuery = $db->prepare("SELECT `adminLoginLink` FROM `footer`");
+$adminLoginLinkQuery->execute();
+$adminLoginLink = $adminLoginLinkQuery->fetchAll();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +77,7 @@
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="aboutMe" value="<?php echo returnParagraph($aboutMeArticle); ?>">
+            <input type="name" name="aboutMe">
             <input type="submit">
         </form>
     </div>
