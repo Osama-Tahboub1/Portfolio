@@ -227,58 +227,58 @@ function returnAdminLoginIcon(array $array): string{
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="aboutMe">
+            <input type="name" name="aboutMe" value="<?php echo returnParagraph($aboutMeArticle); ?>" height="20px" size="20px">
             <input type="submit">
         </form>
     </div>
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="projectTitle">
+            <input type="name" name="projectTitle" value="<?php echo returnProjectTitle($projectTitle); ?>">
             <input type="submit">
         </form>
 
         <form method="post" action="admin.php">
-            <input type="name" name="projectTitleLink">
+            <input type="name" name="projectTitleLink" value="<?php echo returnProjectTitleLink($projectTitleLink); ?>">
             <input type="submit">
         </form>
 
         <form method="post" action="admin.php">
-            <input type="name" name="projectImage">
-            <input type="submit">
-        </form>
-    </div>
-
-    <div>
-        <form method="post" action="admin.php">
-            <input type="name" name="contactEmail">
-            <input type="submit">
-        </form>
-
-        <form method="post" action="admin.php">
-            <input type="name" name="emailSubject">
-            <input type="submit">
-        </form>
-
-        <form method="post" action="admin.php">
-            <input type="name" name="contactIcon">
-            <input type="submit">
-        </form>
-
-        <form method="post" action="admin.php">
-            <input type="name" name="smallContactIcon">
+            <input type="name" name="projectImage" value="<?php echo returnProjectImage($projectImage); ?>">
             <input type="submit">
         </form>
     </div>
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="adminLoginLink">
+            <input type="name" name="contactEmail" value="<?php echo returnContactEmail($contactEmail); ?>">
             <input type="submit">
         </form>
 
         <form method="post" action="admin.php">
-            <input type="name" name="adminLoginIcon">
+            <input type="name" name="emailSubject" value="<?php echo returnEmailSubject($emailSubject); ?>">
+            <input type="submit">
+        </form>
+
+        <form method="post" action="admin.php">
+            <input type="name" name="contactIcon" value="<?php echo returnContactIcon($contactIcon); ?>">
+            <input type="submit">
+        </form>
+
+        <form method="post" action="admin.php">
+            <input type="name" name="smallContactIcon" value="<?php echo returnSmallContactIcon($smallContactIcon); ?>">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div>
+        <form method="post" action="admin.php">
+            <input type="name" name="adminLoginLink" value="<?php echo returnAdminLoginLink($adminLoginLink); ?>">
+            <input type="submit">
+        </form>
+
+        <form method="post" action="admin.php">
+            <input type="name" name="adminLoginIcon" value="<?php echo returnAdminLoginIcon($adminLoginIcon); ?>">
             <input type="submit">
         </form>
     </div>
