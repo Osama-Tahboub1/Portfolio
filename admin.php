@@ -68,7 +68,7 @@ function returnParagraph(array $array): string{
 function returnProjectTitle(array $array): string{
     $paragraph = '';
     foreach ($array as $value) {
-        $paragraph .= $value['projectTitle'];
+        $paragraph .=$value['projectTitle'];
     }
     return $paragraph;
 }
@@ -227,14 +227,14 @@ function returnAdminLoginIcon(array $array): string{
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="aboutMe" value="<?php echo returnParagraph($aboutMeArticle); ?>" height="20px" size="20px">
+            <textarea name="aboutMe"><?php echo returnParagraph($aboutMeArticle); ?></textarea>
             <input type="submit">
         </form>
     </div>
 
     <div>
         <form method="post" action="admin.php">
-            <input type="name" name="projectTitle" value="<?php echo returnProjectTitle($projectTitle); ?>">
+            <textarea name="projectTitle"><?php echo returnProjectTitle($projectTitle); ?></textarea>
             <input type="submit">
         </form>
 
