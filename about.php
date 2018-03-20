@@ -30,6 +30,21 @@ $adminLoginIcon = $adminLoginIconQuery->fetchAll();
 $adminLoginLinkQuery = $db->prepare("SELECT `adminLoginLink` FROM `footer`");
 $adminLoginLinkQuery->execute();
 $adminLoginLink = $adminLoginLinkQuery->fetchAll();
+
+/* Doc Block
+ * Adds paragraph from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function insertParagraph(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= '<p>'.$value['aboutMeArticle'].'</p>';
+    }
+    return $paragraph;
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,10 +76,7 @@ $adminLoginLink = $adminLoginLinkQuery->fetchAll();
         <article>
             <p>
                 <?php
-                foreach ($result as $value) {
-                    echo $value[aboutMeArticle];
-                    echo '<p></p>';
-                }
+                echo insertParagraph($result);
                 ?>
             </p>
         </article>
