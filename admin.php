@@ -42,6 +42,156 @@ $adminLoginIcon = $adminLoginIconQuery->fetchAll();
 $adminLoginLinkQuery = $db->prepare("SELECT `adminLoginLink` FROM `footer`");
 $adminLoginLinkQuery->execute();
 $adminLoginLink = $adminLoginLinkQuery->fetchAll();
+
+/* Doc Block
+ * Returns paragraph from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnParagraph(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['aboutMeArticle'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns project titles from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectTitle(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['projectTitle'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns project title link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectTitleLink(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['projectTitleLink'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns project image link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectImage(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['projectImage'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns contact email from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnContactEmail(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['contactEmail'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns email subject from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnEmailSubject(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['emailSubject'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns contact icon link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnContactIcon(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['contactIcon'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns small contact icon link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnSmallContactIcon(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['smallContactIcon'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns cms page link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnAdminLoginLink(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['adminLoginLink'];
+    }
+    return $paragraph;
+}
+
+/* Doc Block
+ * Returns cms page icon from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnAdminLoginIcon(array $array): string{
+    $paragraph = '';
+    foreach ($array as $value) {
+        $paragraph .= $value['adminLoginIcon'];
+    }
+    return $paragraph;
+}
 ?>
 
 <!DOCTYPE html>
