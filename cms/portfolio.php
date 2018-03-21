@@ -3,17 +3,9 @@
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$projectTitleQuery = $db->prepare("SELECT `projectTitle` FROM `portfolio`");
-$projectTitleQuery->execute();
-$projectTitle = $projectTitleQuery->fetchAll();
-
-$projectTitleLinkQuery = $db->prepare("SELECT `projectTitleLink` FROM `portfolio`");
-$projectTitleLinkQuery->execute();
-$projectTitleLink = $projectTitleLinkQuery->fetchAll();
-
-$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio`");
-$projectImageQuery->execute();
-$projectImage = $projectImageQuery->fetchAll();
+$projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
+$projectInfoQuery->execute();
+$projectInfo = $projectInfoQuery->fetchAll();
 
 /* Doc Block
  * Returns project titles from array content provided by database.
@@ -23,10 +15,10 @@ $projectImage = $projectImageQuery->fetchAll();
  * @return string the content of the arrays within the arrays pulled from the database.
  */
 function returnProjectTitle(array $array): string{
-    $paragraph = '';
-    foreach ($array as $value) {
-        $paragraph .="<p>".$value['projectTitle']."</p>";
-    }
+       $paragraph = '';
+       foreach ($array as $value) {
+               $paragraph .="<p>".$value['projectTitle']."</p>";
+           }
     return $paragraph;
 }
 
@@ -38,10 +30,10 @@ function returnProjectTitle(array $array): string{
  * @return string the content of the arrays within the arrays pulled from the database.
  */
 function returnProjectTitleLink(array $array): string{
-    $paragraph = '';
-    foreach ($array as $value) {
-        $paragraph .= "<p>".$value['projectTitleLink']."</p>";
-    }
+       $paragraph = '';
+       foreach ($array as $value) {
+               $paragraph .= "<p>".$value['projectTitleLink']."</p>";
+           }
     return $paragraph;
 }
 
@@ -53,10 +45,10 @@ function returnProjectTitleLink(array $array): string{
  * @return string the content of the arrays within the arrays pulled from the database.
  */
 function returnProjectImage(array $array): string{
-    $paragraph = '';
-    foreach ($array as $value) {
-        $paragraph .= $value['projectImage'];
-    }
+       $paragraph = '';
+       foreach ($array as $value) {
+               $paragraph .= $value['projectImage'];
+           }
     return $paragraph;
 }
 
@@ -65,9 +57,9 @@ function returnProjectImage(array $array): string{
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-</head>
+       <meta charset="UTF-8">
+       <title>Portfolio</title>
+   </head>
 <body>
 
 <h1>Portfolio</h1>
