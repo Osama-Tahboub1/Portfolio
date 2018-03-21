@@ -150,9 +150,9 @@ function returnProjectId(array $array, int $recId){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <meta charset="UTF-8">
-       <title>Portfolio</title>
-   </head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+</head>
 <body>
 
 <h1>Portfolio</h1>
