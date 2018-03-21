@@ -14,12 +14,12 @@ $projectInfo = $projectInfoQuery->fetchAll();
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnProjectTitle(array $array): string{
-       $paragraph = '';
-       foreach ($array as $value) {
-               $paragraph .="<p>".$value['projectTitle']."</p>";
-           }
-    return $paragraph;
+function returnProjectTitles(array $array): string{ // change title to record
+    $titles = '';
+    foreach ($array as $value) {
+        $titles .=$value['projectTitle']."\n";
+    }
+    return $titles;
 }
 
 /* Doc Block
@@ -29,12 +29,12 @@ function returnProjectTitle(array $array): string{
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnProjectTitleLink(array $array): string{
-       $paragraph = '';
-       foreach ($array as $value) {
-               $paragraph .= "<p>".$value['projectTitleLink']."</p>";
-           }
-    return $paragraph;
+function returnProjectTitleLinks(array $array): string{
+    $titlesLinks = '';
+    foreach ($array as $value) {
+        $titlesLinks .= $value['projectTitleLink']."\n";
+    }
+    return $titlesLinks;
 }
 
 /* Doc Block
@@ -44,12 +44,87 @@ function returnProjectTitleLink(array $array): string{
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnProjectImage(array $array): string{
-       $paragraph = '';
-       foreach ($array as $value) {
-               $paragraph .= $value['projectImage'];
-           }
-    return $paragraph;
+function returnProjectImages(array $array): string{
+    $projectImages = '';
+    foreach ($array as $value) {
+        $projectImages .= $value['projectImage']."\n";
+    }
+    return $projectImages;
+}
+
+/* Doc Block
+ * Returns project image link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectIds(array $array): string{
+    $projectIds = '';
+    foreach ($array as $value) {
+        $projectIds .= $value["id"]."\n";
+    }
+    return $projectIds;
+}
+
+/* Doc Block
+ * Returns project titles from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectTitle(array $array, int $recId): string{ // change title to record
+    $index = $recId - 1;
+    $projectTitleArray = $array[$index];
+    $projectTitle = '';
+    $projectTitle .=$projectTitleArray['projectTitle'];
+    return $projectTitle;
+}
+
+/* Doc Block
+ * Returns project title link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectTitleLink(array $array, int $recId): string{
+    $index = $recId - 1;
+    $projectTitleLinkArray = $array[$index];
+    $projectTitleLink = '';
+    $projectTitleLink .= $projectTitleLinkArray["projectTitleLink"];
+    return $projectTitleLink;
+}
+
+/* Doc Block
+ * Returns project image link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectImage(array $array, int $recId): string{
+    $index = $recId - 1;
+    $projectImageArray = $array[$index];
+    $projectImage = '';
+    $projectImage .= $projectImageArray['projectImage']."\n";
+    return $projectImage;
+}
+
+/* Doc Block
+ * Returns project image link from array content provided by database.
+ *
+ * @param $array array associative array provided by database.
+ *
+ * @return string the content of the arrays within the arrays pulled from the database.
+ */
+function returnProjectId(array $array, int $recId){
+    $index = $recId - 1;
+    $projectIdArray = $array[$index];
+    $projectId = '';
+    $projectId .= $projectIdArray['id'];
+    return $projectId;
 }
 
 ?>
