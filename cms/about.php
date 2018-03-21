@@ -22,36 +22,7 @@ $articleParagraphQuery->bindParam (':paragraphNumber',$paragraphNumber);
 $articleParagraphQuery->execute();
 $articleParagraph = $articleParagraphQuery->fetchAll();
 
-/* Doc Block
- * Returns article from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string the content of the arrays within the arrays pulled from the database.
- */
-function returnArticle(array $array): string{
-    $article = '';
-
-    foreach ($array as $value) {
-        $article .= $value['aboutMeArticle']."\n"."\n";
-    }
-    return $article;
-}
-
-/* Doc Block
- * Returns single paragraph from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string the content of the arrays within the arrays pulled from the database.
- */
-function returnParagraph(array $array, int $id): string{
-    $index = $id - 1;
-    $paragraphArray = $array[$index];
-    $paragraph = '';
-    $paragraph .= $paragraphArray['aboutMeArticle'];
-    return $paragraph;
-}
+require_once 'functions.php';
 
 ?>
 
