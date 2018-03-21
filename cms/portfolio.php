@@ -173,6 +173,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle1" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 1); ?></textarea>
             <textarea name="projectTitleLink1" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo,1); ?></textarea>
             <textarea name="projectImage1" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 1); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -184,6 +185,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 2); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 2); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 2); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -195,6 +197,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 3); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 3); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 3); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -206,7 +209,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 4); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 4); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 4); ?></textarea>
-
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -218,6 +221,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 5); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 5); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 5); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -229,6 +233,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 6); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 6); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 6); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -240,6 +245,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 7); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 7); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 7); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -251,6 +257,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 8); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 8); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 8); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
@@ -262,6 +269,7 @@ function returnProjectId(array $array, int $recId){
             <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 9); ?></textarea>
             <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 9); ?></textarea>
             <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 9); ?></textarea>
+            <p></p>
             <input type="submit" value="Update">
         </form>
     </div>
