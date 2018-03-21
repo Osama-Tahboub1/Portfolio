@@ -147,4 +147,104 @@ function returnProjectId(array $array, int $recId){
         <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo returnProjectImages($projectInfo); ?></textarea>
     </div>
 
+    <div>
+        <h2>Project 1</h2>
+
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId1" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 1); ?></textarea>
+            <textarea name="projectTitle1" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 1); ?></textarea>
+            <textarea name="projectTitleLink1" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo,1); ?></textarea>
+            <textarea name="projectImage1" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 1); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 2</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 2); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 2); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 2); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 2); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 3</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 3); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 3); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 3); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 3); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 4</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 4); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 4); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 4); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 4); ?></textarea>
+
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 5</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 5); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 5); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 5); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 5); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 6</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 6); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 6); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 6); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 6); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 7</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 7); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 7); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 7); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 7); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 8</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 8); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 8); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 8); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 8); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <div>
+        <h2>Project 9</h2>
+        <form method="post" action="portfolio.php">
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 9); ?></textarea>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 9); ?></textarea>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 9); ?></textarea>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 9); ?></textarea>
+            <input type="submit" value="Update">
+        </form>
+    </div>
 </body>
