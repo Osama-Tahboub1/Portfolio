@@ -40,21 +40,6 @@ $adminLoginLinkQuery->execute();
 $adminLoginLink = $adminLoginLinkQuery->fetchAll();
 
 /* Doc Block
- * Returns paragraph from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string the content of the arrays within the arrays pulled from the database.
- */
-function returnParagraph(array $array): string{
-    $paragraph = '';
-    foreach ($array as $value) {
-        $paragraph .= $value['aboutMeArticle'];
-    }
-    return $paragraph;
-}
-
-/* Doc Block
  * Returns project titles from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -198,7 +183,7 @@ function returnAdminLoginIcon(array $array): string{
 </head>
 <body>
     <nav>
-        <span><a>About Me</a></span>
+        <span><a href="about.php">About Me</a></span>
         <ul>
             <li>
                 About me article
@@ -221,12 +206,7 @@ function returnAdminLoginIcon(array $array): string{
         </ul>
     </nav>
 
-    <div>
-        <form method="post" action="admin.php">
-            <textarea name="aboutMe"><?php echo returnParagraph($aboutMeArticle); ?></textarea>
-            <input type="submit">
-        </form>
-    </div>
+
 
     <div>
         <form method="post" action="admin.php">
