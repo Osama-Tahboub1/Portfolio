@@ -7,6 +7,12 @@ $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
 $aboutMeArticleQuery->execute();
 $aboutMeArticle = $aboutMeArticleQuery->fetchAll();
 
+$paragraphNumber = 1;
+$articleParagraphQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe` WHERE `id` = :paragraphNumber;");
+$articleParagraphQuery->bindParam (':paragraphNumber',$paragraphNumber);
+$articleParagraphQuery->execute();
+$articleParagraph = $articleParagraphQuery->fetchAll();
+
 /* Doc Block
  * Returns paragraph from array content provided by database.
  *
@@ -34,8 +40,31 @@ function returnParagraph(array $array): string{
     <h1>About me article</h1>
 
     <div>
+        <form>
+            <textarea name="aboutMe" cols="50" rows="15" maxlength="500"><?php echo returnParagraph($aboutMeArticle); ?></textarea>
+        </form>
+    </div>
+    <div>
         <form method="post" action="admin.php">
-            <textarea name="aboutMe"><?php echo returnParagraph($aboutMeArticle); ?></textarea>
+            <textarea name="paragraph1" cols="50" rows="15" maxlength="500"><?php echo returnParagraph($articleParagraph); ?></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form method="post" action="admin.php">
+            <textarea name="paragraph2" cols="50" rows="15" maxlength="500"><?php echo returnParagraph($articleParagraph); ?></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form method="post" action="admin.php">
+            <textarea name="paragraph3" cols="50" rows="15" maxlength="500"><?php echo returnParagraph($articleParagraph); ?></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form method="post" action="admin.php">
+            <textarea name="paragraph4" cols="50" rows="15" maxlength="500"><?php echo returnParagraph($articleParagraph); ?></textarea>
             <input type="submit">
         </form>
     </div>
