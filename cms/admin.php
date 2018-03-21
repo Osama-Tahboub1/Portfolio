@@ -183,19 +183,16 @@ function returnAdminLoginIcon(array $array): string{
 </head>
 <body>
     <nav>
-        <span><a href="about.php">About Me</a></span>
         <ul>
-            <li>
-                About me article
-            </li>
-        </ul>
-        <span><a>Portfolio</a></span>
+            <li><a href="about.php">About Me</a></li>
+
+            <li><a href="#">Portfolio</a></li>
         <ul>
             <li>
                 Projects
             </li>
         </ul>
-        <span><a>Footer</a></span>
+            <li><a href="#">Footer</a></li>
         <ul>
             <li>
                 Contact email
@@ -203,6 +200,7 @@ function returnAdminLoginIcon(array $array): string{
             <li>
                 Admin page link
             </li>
+        </ul>
         </ul>
     </nav>
 

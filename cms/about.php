@@ -31,6 +31,8 @@ function returnParagraph(array $array): string{
     <title>Content Management System</title>
 </head>
 <body>
+    <h1>About me article</h1>
+
     <div>
         <form method="post" action="admin.php">
             <textarea name="aboutMe"><?php echo returnParagraph($aboutMeArticle); ?></textarea>
