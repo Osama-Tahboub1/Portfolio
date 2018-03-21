@@ -63,7 +63,6 @@ function returnParagraph(array $array, int $id): string{
 </head>
 <body>
     <h1>About me article</h1>
-
     <div>
         <form>
             <textarea name="aboutMe" cols="50" rows="15" maxlength="500"><?php echo returnArticle($aboutMeArticle); ?></textarea>
