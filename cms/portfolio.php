@@ -139,19 +139,12 @@ function returnProjectId(array $array, int $recId){
 
 <h1>Portfolio</h1>
 
-<div>
-    <form method="post" action="admin.php">
-        <textarea name="projectTitle"><?php echo returnProjectTitle($projectTitle); ?></textarea>
-        <input type="submit">
-    </form>
+    <div>
+        <h2>Current Values</h2>
+        <textarea name="projectId" cols="20" rows="10" maxlength="500"><?php echo returnProjectIds($projectInfo); ?></textarea>
+        <textarea name="projectTitle" cols="20" rows="10" maxlength="500"><?php echo returnProjectTitles($projectInfo); ?></textarea>
+        <textarea name="projectTitleLink" cols="100" rows="10" maxlength="500"><?php echo returnProjectTitleLinks($projectInfo); ?></textarea>
+        <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo returnProjectImages($projectInfo); ?></textarea>
+    </div>
 
-    <form method="post" action="admin.php">
-        <input type="name" name="projectTitleLink" value="<?php echo returnProjectTitleLink($projectTitleLink); ?>">
-        <input type="submit">
-    </form>
-
-    <form method="post" action="admin.php">
-        <input type="name" name="projectImage" value="<?php echo returnProjectImage($projectImage); ?>">
-        <input type="submit">
-    </form>
-</div>
+</body>
