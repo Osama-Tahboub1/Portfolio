@@ -154,3 +154,19 @@ function returnParagraph(array $array, int $id): string{
     $paragraph .= $paragraphArray['aboutMeArticle'];
     return $paragraph;
 }
+
+//SQL Functions:
+
+/* Doc Block
+ * Returns an associative array with content from portfolio table from database.
+ *
+ * @param $db object database link and credentials PDO object.
+ *
+ * @return array returns associative array with arrays containing content from portfolio table from database.
+ */
+function getProjectInfo (PDO $db): array{
+    $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
+    $projectInfoQuery->execute();
+    return $projectInfo = $projectInfoQuery->fetchAll();
+}
+

@@ -3,29 +3,9 @@
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-function updateProject1($db) {
-$projectTitle1 = $_POST['projectTitle1'];
-$projectTitleLink1 =$_POST['projectTitleLink1'];
-$projectImage1 = $_POST['projectImage1'];
-$projectId1 = $_POST['projectId1'];
-
-$query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectTitleLink, `projectTitleLink` = :projectImage WHERE `id` = :projectId");
-
-$query->bindParam (':projectTitle',$projectTitle1);
-$query->bindParam (':projectTitleLink',$projectTitleLink1);
-$query->bindParam (':projectImage',$projectImage1);
-$query->bindParam (':projectId',$projectId1);
-
-
-
-$query->execute();
-}
-
-$projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
-$projectInfoQuery->execute();
-$projectInfo = $projectInfoQuery->fetchAll();
-
 require_once 'functions.php';
+
+$projectInfo = getProjectInfo($db);
 
 ?>
 
