@@ -8,8 +8,11 @@ require_once 'functions.php';
 
 $credentials = getUserCredentials($db);
 
-$inputUserName = $credentials[0]['name'];
-$inputPassword = $credentials[0]['password'];
+$actualUserName = $credentials[0]['name'];
+$actualPassword = $credentials[0]['password'];
+
+$inputUserName = $_POST['userName'];
+$inputPassword = $_POST['password'];
 
 
 
