@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.39)
 # Database: osamasCMSDB
-# Generation Time: 2018-03-22 11:42:32 +0000
+# Generation Time: 2018-03-22 14:32:47 +0000
 # ************************************************************
 
 
@@ -47,6 +47,18 @@ CREATE TABLE `footer` (
 
 
 
+# Dump of table passwords
+# ------------------------------------------------------------
+
+CREATE TABLE `passwords` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `password` varchar(50) NOT NULL DEFAULT '',
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
 # Dump of table portfolio
 # ------------------------------------------------------------
 
@@ -55,6 +67,17 @@ CREATE TABLE `portfolio` (
   `projectTitle` varchar(50) DEFAULT NULL,
   `projectImage` varchar(500) DEFAULT NULL,
   `projectTitleLink` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
