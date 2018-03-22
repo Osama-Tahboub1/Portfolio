@@ -18,56 +18,100 @@ class StackTest extends TestCase
 
     public function testReturnProjectTitles()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectTitleLinks()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectImages()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectIds()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectTitle()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectTitleLink()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectImage()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectId(){
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnArticle()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
     public function testReturnParagraph()
     {
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
 
     public function testGetProjectInfo(){
+        $expected =;
+        $input =;
+        $case =;
 
+        $this->assertEquals($case, $expected);
     }
 
 
