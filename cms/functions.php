@@ -7,7 +7,7 @@
  *
  * @return string a list of project titles in the arrays within the arrays pulled from the database.
  */
-function returnProjectTitles(array $array): string{ // change title to record
+function returnProjectTitles(array $array): string{
     $titles = '';
     foreach ($array as $value) {
         $titles .=$value['projectTitle']."\n";
@@ -164,7 +164,7 @@ function returnParagraph(array $array, int $id): string{
  *
  * @return array returns associative array with arrays containing content from portfolio table from database.
  */
-function getProjectInfo (PDO $db): array{
+function getProjectInfo(PDO $db): array{
     $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
     $projectInfoQuery->execute();
     return $projectInfo = $projectInfoQuery->fetchAll();
