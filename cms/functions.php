@@ -7,7 +7,7 @@
  *
  * @return string a list of project titles in the arrays within the arrays pulled from the database.
  */
-function returnProjectTitles(array $array): string{
+function returnProjectTitles(array $array):string {
     $titles = '';
     foreach ($array as $value) {
         $titles .=$value['projectTitle']."\n";
@@ -22,7 +22,7 @@ function returnProjectTitles(array $array): string{
  *
  * @return string a list of project title links in the arrays within the arrays pulled from the database.
  */
-function returnProjectTitleLinks(array $array): string{
+function returnProjectTitleLinks(array $array):string {
     $titlesLinks = '';
     foreach ($array as $value) {
         $titlesLinks .= $value['projectTitleLink']."\n";
@@ -37,7 +37,7 @@ function returnProjectTitleLinks(array $array): string{
  *
  * @return string a list of project image links in the arrays within the arrays pulled from the database.
  */
-function returnProjectImages(array $array): string{
+function returnProjectImages(array $array):string {
     $projectImages = '';
     foreach ($array as $value) {
         $projectImages .= $value['projectImage']."\n";
@@ -52,7 +52,7 @@ function returnProjectImages(array $array): string{
  *
  * @return string a list of id's or keys in the arrays within the arrays pulled from the database.
  */
-function returnProjectIds(array $array): string{
+function returnProjectIds(array $array):string {
     $projectIds = '';
     foreach ($array as $value) {
         $projectIds .= $value["id"]."\n";
@@ -68,7 +68,7 @@ function returnProjectIds(array $array): string{
  *
  * @return string the title content for a single record.
  */
-function returnProjectTitle(array $array, int $recId): string{ // change title to record
+function returnProjectTitle(array $array, int $recId):string { // change title to record
     $index = $recId - 1;
     $projectTitleArray = $array[$index];
     $projectTitle = '';
@@ -84,7 +84,7 @@ function returnProjectTitle(array $array, int $recId): string{ // change title t
  *
  * @return string the title link content for a single record.
  */
-function returnProjectTitleLink(array $array, int $recId): string{
+function returnProjectTitleLink(array $array, int $recId):string {
     $index = $recId - 1;
     $projectTitleLinkArray = $array[$index];
     $projectTitleLink = '';
@@ -100,7 +100,7 @@ function returnProjectTitleLink(array $array, int $recId): string{
  *
  * @return string the project image link for a single record.
  */
-function returnProjectImage(array $array, int $recId): string{
+function returnProjectImage(array $array, int $recId):string {
     $index = $recId - 1;
     $projectImageArray = $array[$index];
     $projectImage = '';
@@ -116,7 +116,7 @@ function returnProjectImage(array $array, int $recId): string{
  *
  * @return string an id or key for a single record.
  */
-function returnProjectId(array $array, int $recId){
+function returnProjectId(array $array, int $recId):string {
     $index = $recId - 1;
     $projectIdArray = $array[$index];
     $projectId = '';
@@ -131,7 +131,7 @@ function returnProjectId(array $array, int $recId){
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnArticle(array $array): string{
+function returnArticle(array $array):string {
     $article = '';
 
     foreach ($array as $value) {
@@ -162,7 +162,7 @@ function returnParagraph(array $array, int $id): string{
  *
  * @return array returns associative array with arrays containing content from portfolio table from database.
  */
-function getProjectInfo(PDO $db): array{
+function getProjectInfo(PDO $db):array {
     $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
     $projectInfoQuery->execute();
     return $projectInfo = $projectInfoQuery->fetchAll();
@@ -202,7 +202,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
  *
  * @return array returns associative array with arrays credentials from users and passwords tables from database.
  */
-function getUserCredentials(PDO $db): array{
+function getUserCredentials(PDO $db):array {
     $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`");
     $userCredentialsQuery->execute();
     return $userCredentials = $userCredentialsQuery->fetchAll();
@@ -240,7 +240,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
  */
 
 
-function loggedInSession(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword ) {
+function loggedInSession(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword ):bool {
     $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
 
     if ($loginCheck === true) {
