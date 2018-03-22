@@ -254,7 +254,7 @@ function loggedInSession(string $actualUserName, string $actualPassword, string 
         session_start();
         $_SESSION['loggedIn'] = false;
         echo 'Please log in';
-        header('Location: index.php');
+        header('Location: admin.php');
     }
 }
 
