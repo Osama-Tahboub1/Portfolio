@@ -209,3 +209,23 @@ function getUserCredentials(PDO $db): array{
     $userCredentialsQuery->execute();
     return $userCredentials = $userCredentialsQuery->fetchAll();
 }
+
+/* Doc Block
+ * Checks login details are validated and match saved credentials.
+ *
+ * @param $actualUserName string username stored credential.
+ * @param $actualPassword string password stored credential.
+ * @param $inputUserName string form inout username.
+ * @param $inputPassword string form input password.
+ *
+ * @return bool returns true if both content types are string.
+ */
+function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
+
+
+    if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
+        return true;
+    } else {
+        return false;
+    }
+}
