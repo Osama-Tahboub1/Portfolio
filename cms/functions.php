@@ -155,8 +155,6 @@ function returnParagraph(array $array, int $id): string{
     return $paragraph;
 }
 
-//SQL Functions:
-
 /* Doc Block
  * Returns an associative array with content from portfolio table from database.
  *
