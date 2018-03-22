@@ -12,7 +12,6 @@
 <body>
     <nav>
         <ul>
-            <li><a href="about.php">About Me</a></li>
             <li><a href="portfolio.php">Portfolio</a></li>
         </ul>
     </nav>
