@@ -54,10 +54,14 @@ $adminLoginLink = $adminLoginLinkQuery->fetchAll();
 </header>
 
 <footer class="container">
-    <div class="contactIcon">
+    <div class="browsingIcons">
         <span>Contact me</span>
-        <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
-        <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
+        <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>">
+            <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
+        </a>
+        <a href="<?php echo $adminLoginLink[0]['adminLoginLink'];?>">
+            <img src="<?php echo $adminLoginIcon[0]['adminLoginIcon'];?>" class="adminLinkIcon">
+        </a>
     </div>
 
     <div class="contactIconSmall">
