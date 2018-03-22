@@ -104,7 +104,7 @@ function returnProjectImage(array $array, int $recId): string{
     $index = $recId - 1;
     $projectImageArray = $array[$index];
     $projectImage = '';
-    $projectImage .= $projectImageArray['projectImage']."\n";
+    $projectImage .= $projectImageArray['projectImage'];
     return $projectImage;
 }
 
@@ -170,3 +170,23 @@ function getProjectInfo (PDO $db): array{
     return $projectInfo = $projectInfoQuery->fetchAll();
 }
 
+function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId) {
+
+    $title = $projectTitle;
+    $titleLink = $projectTitleLink;
+    $image = $projectImage;
+    $id =  $projectId;
+
+
+    $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectTitleLink, `projectTitleLink` = :projectImage WHERE `id` = :projectId");
+
+    $query->bindParam (':projectTitle',$title);
+    $query->bindParam (':projectTitleLink',$titleLink);
+    $query->bindParam (':projectImage',$image);
+    $query->bindParam (':projectId',$id);
+
+    $query->execute();
+
+    $updatedInfo = $id.' '. $title.' '.$titleLink.' '.$image;
+    return $updatedInfo;
+}
