@@ -87,6 +87,8 @@ function insertParagraph(array $array): string{
             <span>Contact me</span>
             <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
             <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
+            <a href="<?php echo $adminLoginLink[0]['adminLoginLink'];?>"></a>
+            <img src="<?php echo $adminLoginIcon[0]['adminLoginIcon'];?>">
         </div>
 
         <div class="contactIconSmall">
