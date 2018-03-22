@@ -170,23 +170,28 @@ function getProjectInfo (PDO $db): array{
     return $projectInfo = $projectInfoQuery->fetchAll();
 }
 
+/* Doc Block
+ * Updates the values of a row in portfolio table in database.
+ *
+ * @param $db object database link and credentials PDO object.
+ * @param $projectTitle string used with post from form and passed in to update the portfolio table in database.
+ * @param $projectTitleLink string used with post from form and passed in to update the portfolio table in database.
+ * @param $projectImage string object used with post from form and passed in to update the portfolio table in database.
+ * @param $projectId string used with post from form and passed in to update the portfolio table in database.
+ *
+ * @return array returns associative array with arrays containing content from portfolio table from database.
+ */
 function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId) {
-
-    $title = $projectTitle;
-    $titleLink = $projectTitleLink;
-    $image = $projectImage;
-    $id =  $projectId;
-
 
     $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectTitleLink, `projectTitleLink` = :projectImage WHERE `id` = :projectId");
 
-    $query->bindParam (':projectTitle',$title);
-    $query->bindParam (':projectTitleLink',$titleLink);
-    $query->bindParam (':projectImage',$image);
-    $query->bindParam (':projectId',$id);
+    $query->bindParam (':projectTitle',$projectTitle);
+    $query->bindParam (':projectTitleLink',$projectTitleLink);
+    $query->bindParam (':projectImage',$projectImage);
+    $query->bindParam (':projectId',$projectId);
 
     $query->execute();
 
-    $updatedInfo = $id.' '. $title.' '.$titleLink.' '.$image;
+    $updatedInfo = $projectId.' '. $projectTitle.' '.$projectTitleLink.' '.$projectImage;
     return $updatedInfo;
 }
