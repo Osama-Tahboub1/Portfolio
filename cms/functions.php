@@ -229,3 +229,32 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
         return false;
     }
 }
+
+/* Doc Block
+ * Directs to admin page or echoes instructions depending on credentials check.
+ *
+ *  * @param $actualUserName string username stored credential.
+ * @param $actualPassword string password stored credential.
+ * @param $inputUserName string form inout username.
+ * @param $inputPassword string form input password.
+ *
+ * @return bool returns true if both content types are string.
+ */
+
+
+function loggedInSession(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword ) {
+    $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+
+    if ($loginCheck === true) {
+        session_start();
+        $_SESSION['loggedIn'] = true;
+        header('Location: admin.php');
+
+    } else {
+        session_start();
+        $_SESSION['loggedIn'] = false;
+        echo 'Please log in';
+        header('Location: index.php');
+    }
+}
+

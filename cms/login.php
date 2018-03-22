@@ -14,7 +14,9 @@ $actualPassword = $credentials[0]['password'];
 $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 
-checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+loggedInSession($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+
+
 
 ?>
 
