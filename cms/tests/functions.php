@@ -3,113 +3,105 @@ use PHPUnit\Framework\TestCase;
 
 require '../functions.php';
 
+
 class StackTest extends TestCase
 {
     //Success
-    public function testInsertParagraph()
-    {
-        $expected = '<p>I am currently attending Mayden Academy to become a full stack developer using HTML, CSS, Java Script, PHP, SQL and Node.js.</p><p>Other interests are back end development using ASP.net and C#.</p>';
-        $input = [0 => ["aboutMeArticle"=>  "I am currently attending Mayden Academy to become a full stack developer using HTML, CSS, Java Script, PHP, SQL and Node.js."], 1 => ["aboutMeArticle" => "Other interests are back end development using ASP.net and C#." ]];
-        $case = insertParagraph($input);
-
-        $this->assertEquals($case, $expected);
-    }
-
-
     public function testReturnProjectTitles()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "Pilot Shop\nCMS Project\nNew Project\n\n\n\n\n\n\n";
+        $input =getProjectInfo($db);
+        $case = returnProjectTitles($input);
 
         $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectTitleLinks()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\nhttps://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\nhttps://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\n\n\n\n\n\n\n";
+        $input =getProjectInfo($db);
+        $case = returnProjectTitleLinks($input);
 
         $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectImages()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\nhttps://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\nhttps://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\n\n\n\n\n\n\n";
+        $input =getProjectInfo($db);
+        $case = returnProjectImages($input);
 
         $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectIds()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "1\n2\n3\n4\n5\n6\n7\n8\n9\n";
+        $input =getProjectInfo($db);
+        $case = returnProjectIds($input);
 
         $this->assertEquals($case, $expected);
     }
-
     public function testReturnProjectTitle()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "Pilot Shop";
+        $input1 =getProjectInfo($db);
+        $input2 = 1;
+        $case = returnProjectTitle($input1, $input2);
 
         $this->assertEquals($case, $expected);
     }
+
 
     public function testReturnProjectTitleLink()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/";
+        $input1 =getProjectInfo($db);
+        $input2 = 1;
+        $case = returnProjectTitleLink($input1, $input2);
 
         $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectImage()
     {
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+        $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png";
+        $input1 =getProjectInfo($db);
+        $input2 = 1;
+        $case = returnProjectImage($input1, $input2);
 
         $this->assertEquals($case, $expected);
     }
 
     public function testReturnProjectId(){
-        $expected =;
-        $input =;
-        $case =;
+        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-        $this->assertEquals($case, $expected);
-    }
-
-    public function testReturnArticle()
-    {
-        $expected =;
-        $input =;
-        $case =;
-
-        $this->assertEquals($case, $expected);
-    }
-
-    public function testReturnParagraph()
-    {
-        $expected =;
-        $input =;
-        $case =;
-
-        $this->assertEquals($case, $expected);
-    }
-
-
-    public function testGetProjectInfo(){
-        $expected =;
-        $input =;
-        $case =;
+        $expected = "1";
+        $input1 =getProjectInfo($db);
+        $input2 = 1;
+        $case = returnProjectId($input1, $input2);
 
         $this->assertEquals($case, $expected);
     }
