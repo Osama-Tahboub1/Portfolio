@@ -7,7 +7,6 @@ require_once 'functions.php';
 
 $projectInfo = getProjectInfo($db);
 
-
 $projectTitle1 = $_POST['projectTitle1'];
 $projectTitleLink1 =$_POST['projectTitleLink1'];
 $projectImage1 = $_POST['projectImage1'];

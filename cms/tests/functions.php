@@ -9,11 +9,8 @@ class StackTest extends TestCase
     //Success
     public function testReturnProjectTitles()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "Pilot Shop\nCMS Project\nNew Project\n\n\n\n\n\n\n";
-        $input =getProjectInfo($db);
+        $input =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $case = returnProjectTitles($input);
 
         $this->assertEquals($case, $expected);
@@ -21,11 +18,8 @@ class StackTest extends TestCase
 
     public function testReturnProjectTitleLinks()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\nhttps://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\nhttps://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/\n\n\n\n\n\n\n";
-        $input =getProjectInfo($db);
+        $input =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $case = returnProjectTitleLinks($input);
 
         $this->assertEquals($case, $expected);
@@ -33,11 +27,8 @@ class StackTest extends TestCase
 
     public function testReturnProjectImages()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\nhttps://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\nhttps://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png\n\n\n\n\n\n\n";
-        $input =getProjectInfo($db);
+        $input =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $case = returnProjectImages($input);
 
         $this->assertEquals($case, $expected);
@@ -45,22 +36,16 @@ class StackTest extends TestCase
 
     public function testReturnProjectIds()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "1\n2\n3\n4\n5\n6\n7\n8\n9\n";
-        $input =getProjectInfo($db);
+        $input =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $case = returnProjectIds($input);
 
         $this->assertEquals($case, $expected);
     }
     public function testReturnProjectTitle()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "Pilot Shop";
-        $input1 =getProjectInfo($db);
+        $input1 =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $input2 = 1;
         $case = returnProjectTitle($input1, $input2);
 
@@ -70,11 +55,8 @@ class StackTest extends TestCase
 
     public function testReturnProjectTitleLink()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/";
-        $input1 =getProjectInfo($db);
+        $input1 =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $input2 = 1;
         $case = returnProjectTitleLink($input1, $input2);
 
@@ -83,11 +65,8 @@ class StackTest extends TestCase
 
     public function testReturnProjectImage()
     {
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png";
-        $input1 =getProjectInfo($db);
+        $input1 =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $input2 = 1;
         $case = returnProjectImage($input1, $input2);
 
@@ -95,11 +74,8 @@ class StackTest extends TestCase
     }
 
     public function testReturnProjectId(){
-        $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
         $expected = "1";
-        $input1 =getProjectInfo($db);
+        $input1 =[0=>["id"=>"1","projectTitle"=>"Pilot Shop","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],1=>["id"=>"2","projectTitle"=>"CMS Project","projectTitleLink"=>"https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/", "projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],2=>["id"=>"3","projectTitle"=>"New Project","projectTitleLink"=> "https://dev.maydenacademy.co.uk/students/2018/osama/PilotShopSite/","projectImage"=>"https://dev.maydenacademy.co.uk/students/2018/osama/Portfolio/assets/PilotShop.png"],3=>["id"=>"4","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],4=>["id"=>"5","projectTitle"=> NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],5=>["id"=>"6","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],6=>["id"=>"7","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],7=>["id"=>"8","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL],8=>["id"=>"9","projectTitle"=>NULL,"projectTitleLink"=>NULL,"projectImage"=>NULL]];
         $input2 = 1;
         $case = returnProjectId($input1, $input2);
 
@@ -108,4 +84,6 @@ class StackTest extends TestCase
 
 
 }
+
+
 
