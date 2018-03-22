@@ -8,7 +8,7 @@ require_once 'functions.php';
 $projectInfo = getProjectInfo($db);
 
 $projectTitle1 = $_POST['projectTitle1'];
-$projectTitleLink1 =$_POST['projectTitleLink1'];
+$projectTitleLink1 = $_POST['projectTitleLink1'];
 $projectImage1 = $_POST['projectImage1'];
 $projectId1 = $_POST['projectId1'];
 
@@ -20,7 +20,7 @@ if ($projectTitle1 != NULL && $projectTitleLink1 != NULL && $projectImage1 != NU
 
 
 $projectTitle2 = $_POST['projectTitle2'];
-$projectTitleLink2 =$_POST['projectTitleLink2'];
+$projectTitleLink2 = $_POST['projectTitleLink2'];
 $projectImage2 = $_POST['projectImage2'];
 $projectId2 = $_POST['projectId2'];
 
@@ -31,7 +31,7 @@ if ($projectTitle2 != NULL && $projectTitleLink2 != NULL && $projectImage2 != NU
 }
 
 $projectTitle3 = $_POST['projectTitle3'];
-$projectTitleLink3 =$_POST['projectTitleLink3'];
+$projectTitleLink3 = $_POST['projectTitleLink3'];
 $projectImage3 = $_POST['projectImage3'];
 $projectId3 = $_POST['projectId3'];
 
@@ -42,7 +42,7 @@ if ($projectTitle3 != NULL && $projectTitleLink3 != NULL && $projectImage3 != NU
 }
 
 $projectTitle4 = $_POST['projectTitle4'];
-$projectTitleLink4 =$_POST['projectTitleLink4'];
+$projectTitleLink4 = $_POST['projectTitleLink4'];
 $projectImage4 = $_POST['projectImage4'];
 $projectId4 = $_POST['projectId4'];
 
@@ -53,7 +53,7 @@ if ($projectTitle4 != NULL && $projectTitleLink4 != NULL && $projectImage4 != NU
 }
 
 $projectTitle5 = $_POST['projectTitle5'];
-$projectTitleLink5 =$_POST['projectTitleLink5'];
+$projectTitleLink5 = $_POST['projectTitleLink5'];
 $projectImage5 = $_POST['projectImage5'];
 $projectId5 = $_POST['projectId5'];
 
@@ -64,7 +64,7 @@ if ($projectTitle5 != NULL && $projectTitleLink5 != NULL && $projectImage5 != NU
 }
 
 $projectTitle6 = $_POST['projectTitle6'];
-$projectTitleLink6 =$_POST['projectTitleLink6'];
+$projectTitleLink6 = $_POST['projectTitleLink6'];
 $projectImage6 = $_POST['projectImage6'];
 $projectId6 = $_POST['projectId6'];
 
@@ -75,7 +75,7 @@ if ($projectTitle6 != NULL && $projectTitleLink6 != NULL && $projectImage6 != NU
 }
 
 $projectTitle7 = $_POST['projectTitle7'];
-$projectTitleLink7 =$_POST['projectTitleLink7'];
+$projectTitleLink7 = $_POST['projectTitleLink7'];
 $projectImage7 = $_POST['projectImage7'];
 $projectId7 = $_POST['projectId7'];
 
@@ -86,7 +86,7 @@ if ($projectTitle7 != NULL && $projectTitleLink7 != NULL && $projectImage7 != NU
 }
 
 $projectTitle8 = $_POST['projectTitle8'];
-$projectTitleLink8 =$_POST['projectTitleLink8'];
+$projectTitleLink8 = $_POST['projectTitleLink8'];
 $projectImage8 = $_POST['projectImage8'];
 $projectId8 = $_POST['projectId8'];
 
@@ -97,7 +97,7 @@ if ($projectTitle8 != NULL && $projectTitleLink8 != NULL && $projectImage8 != NU
 }
 
 $projectTitle9 = $_POST['projectTitle9'];
-$projectTitleLink9 =$_POST['projectTitleLink9'];
+$projectTitleLink9 = $_POST['projectTitleLink9'];
 $projectImage9 = $_POST['projectImage9'];
 $projectId9 = $_POST['projectId9'];
 
