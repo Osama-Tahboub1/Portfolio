@@ -233,7 +233,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
 /* Doc Block
  * Directs to admin page or echoes instructions depending on credentials check.
  *
- *  * @param $actualUserName string username stored credential.
+ *  @param $actualUserName string username stored credential.
  * @param $actualPassword string password stored credential.
  * @param $inputUserName string form inout username.
  * @param $inputPassword string form input password.
@@ -249,12 +249,14 @@ function loggedInSession(string $actualUserName, string $actualPassword, string 
         session_start();
         $_SESSION['loggedIn'] = true;
         header('Location: admin.php');
+        return true;
 
     } else {
         session_start();
         $_SESSION['loggedIn'] = false;
         echo 'Please log in';
         header('Location: admin.php');
+        return false;
     }
 }
 

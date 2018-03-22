@@ -82,7 +82,6 @@ class StackTest extends TestCase
         $this->assertEquals($case, $expected);
     }
 
-
 }
 
 
