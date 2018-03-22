@@ -14,7 +14,9 @@ $actualPassword = $credentials[0]['password'];
 $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 
-loggedInSession($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+if ($inputUserName != NULL && $inputPassword != NULL) {
+    loggedInSession($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+}
 
 
 
