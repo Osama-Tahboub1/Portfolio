@@ -228,7 +228,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
     }
 }
 
-/* 
+/*
  * Directs to admin page or echoes instructions depending on credentials check.
  *
  *  @param $actualUserName string username stored credential.
