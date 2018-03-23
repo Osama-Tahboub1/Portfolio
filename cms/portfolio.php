@@ -73,40 +73,6 @@ if ($projectTitle6 != NULL && $projectTitleLink6 != NULL && $projectImage6 != NU
 
 }
 
-$projectTitle7 = $_POST['projectTitle7'];
-$projectTitleLink7 = $_POST['projectTitleLink7'];
-$projectImage7 = $_POST['projectImage7'];
-$projectId7 = $_POST['projectId7'];
-
-if ($projectTitle7 != NULL && $projectTitleLink7 != NULL && $projectImage7 != NULL && $projectId7!= NULL) {
-    $updatedInfo = updateProject($db, $projectTitle7, $projectTitleLink7, $projectImage7, $projectId7);
-    echo $updatedInfo;
-
-}
-
-$projectTitle8 = $_POST['projectTitle8'];
-$projectTitleLink8 = $_POST['projectTitleLink8'];
-$projectImage8 = $_POST['projectImage8'];
-$projectId8 = $_POST['projectId8'];
-
-if ($projectTitle8 != NULL && $projectTitleLink8 != NULL && $projectImage8 != NULL && $projectId8!= NULL) {
-    $updatedInfo = updateProject($db, $projectTitle8, $projectTitleLink8, $projectImage8, $projectId8);
-    echo $updatedInfo;
-
-}
-
-$projectTitle9 = $_POST['projectTitle9'];
-$projectTitleLink9 = $_POST['projectTitleLink9'];
-$projectImage9 = $_POST['projectImage9'];
-$projectId9 = $_POST['projectId9'];
-
-if ($projectTitle9 != NULL && $projectTitleLink9 != NULL && $projectImage9 != NULL && $projectId9!= NULL) {
-    $updatedInfo = updateProject($db, $projectTitle9, $projectTitleLink9, $projectImage9, $projectId9);
-    echo $updatedInfo;
-
-}
-
-
 ?>
 
 <!DOCTYPE html>
