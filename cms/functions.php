@@ -1,6 +1,6 @@
 <?php
 
-/* Doc Block
+/*
  * Returns all project titles from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -15,7 +15,7 @@ function returnProjectTitles(array $array):string {
     return $titles;
 }
 
-/* Doc Block
+/*
  * Returns all project title links from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -30,7 +30,7 @@ function returnProjectTitleLinks(array $array):string {
     return $titlesLinks;
 }
 
-/* Doc Block
+/*
  * Returns all project image links from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -45,7 +45,7 @@ function returnProjectImages(array $array):string {
     return $projectImages;
 }
 
-/* Doc Block
+/*
  * Returns project id's from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -60,7 +60,7 @@ function returnProjectIds(array $array):string {
     return $projectIds;
 }
 
-/* Doc Block
+/*
  * Returns a single project title from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -76,7 +76,7 @@ function returnProjectTitle(array $array, int $recId):string { // change title t
     return $projectTitle;
 }
 
-/* Doc Block
+/*
  * Returns project title link from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -92,7 +92,7 @@ function returnProjectTitleLink(array $array, int $recId):string {
     return $projectTitleLink;
 }
 
-/* Doc Block
+/*
  * Returns project image link from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -108,7 +108,7 @@ function returnProjectImage(array $array, int $recId):string {
     return $projectImage;
 }
 
-/* Doc Block
+/*
  * Returns project id from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -124,7 +124,7 @@ function returnProjectId(array $array, int $recId):string {
     return $projectId;
 }
 
-/* Doc Block
+/*
  * Returns article from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -140,7 +140,7 @@ function returnArticle(array $array):string {
     return $article;
 }
 
-/* Doc Block
+/*
  * Returns single paragraph from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -155,7 +155,7 @@ function returnParagraph(array $array, int $id): string{
     return $paragraph;
 }
 
-/* Doc Block
+/*
  * Returns an associative array with content from portfolio table from database.
  *
  * @param $db object database link and credentials PDO object.
@@ -168,7 +168,7 @@ function getProjectInfo(PDO $db):array {
     return $projectInfo = $projectInfoQuery->fetchAll();
 }
 
-/* Doc Block
+/*
  * Updates the values of a row in portfolio table in database.
  *
  * @param $db object database link and credentials PDO object.
@@ -194,7 +194,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
     return $updatedInfo;
 }
 
-/* Doc Block
+/*
  * Gets user credentials from the database.
  *
  * @param $db object database link and credentials PDO object.
@@ -208,7 +208,7 @@ function getUserCredentials(PDO $db):array {
     return $userCredentials = $userCredentialsQuery->fetchAll();
 }
 
-/* Doc Block
+/*
  * Checks login details are validated and match saved credentials.
  *
  * @param $actualUserName string username stored credential.
@@ -228,7 +228,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
     }
 }
 
-/* Doc Block
+/* 
  * Directs to admin page or echoes instructions depending on credentials check.
  *
  *  @param $actualUserName string username stored credential.
