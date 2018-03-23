@@ -5,60 +5,42 @@
  *
  * @param $array array associative array provided by database.
  *
- * @return string a list of project titles in arrays within an arrays pulled from the database.
+ * @return returns a form that contains values in the array provided.
  */
-function returnProjectTitles(array $array):string {
+function returnProjectInfo(array $projectInfoArray) {
+
+    $ids = '';
+    foreach ($projectInfoArray as $value) {
+        $ids .= $value["id"]."\n";
+    }
+
     $titles = '';
-    foreach ($array as $value) {
+    foreach ($projectInfoArray as $value) {
         $titles .=$value['projectTitle']."\n";
     }
-    return $titles;
+
+    $titleLinks = '';
+    foreach ($projectInfoArray as $value) {
+        $titleLinks .= $value['projectTitleLink']."\n";
+    }
+
+    $Images = '';
+    foreach ($projectInfoArray as $value) {
+        $Images .= $value['projectImage']."\n";
+    }
+
+    ?>
+    <div>
+        <h2>Current Values</h2>
+        <textarea name="projectId" cols="20" rows="10" maxlength="500"><?php echo $ids; ?></textarea>
+        <textarea name="projectTitle" cols="20" rows="10" maxlength="500"><?php echo $titles; ?></textarea>
+        <textarea name="projectTitleLink" cols="100" rows="10" maxlength="500"><?php echo $titleLinks; ?></textarea>
+        <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo $Images; ?></textarea>
+    </div>
+    <?php
 }
 
-/*
- * Returns all project title links from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of project title links in the arrays within the arrays pulled from the database.
- */
-function returnProjectTitleLinks(array $array):string {
-    $titlesLinks = '';
-    foreach ($array as $value) {
-        $titlesLinks .= $value['projectTitleLink']."\n";
-    }
-    return $titlesLinks;
-}
 
-/*
- * Returns all project image links from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of project image links in the arrays within the arrays pulled from the database.
- */
-function returnProjectImages(array $array):string {
-    $projectImages = '';
-    foreach ($array as $value) {
-        $projectImages .= $value['projectImage']."\n";
-    }
-    return $projectImages;
-}
-
-/*
- * Returns project id's from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of id's or keys in the arrays within the arrays pulled from the database.
- */
-function returnProjectIds(array $array):string {
-    $projectIds = '';
-    foreach ($array as $value) {
-        $projectIds .= $value["id"]."\n";
-    }
-    return $projectIds;
-}
 
 /*
  * Returns a single project title from array content provided by database.

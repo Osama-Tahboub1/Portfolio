@@ -4,7 +4,6 @@ $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
-
 $projectInfo = getProjectInfo($db);
 
 $projectTitle1 = $_POST['projectTitle1'];
@@ -107,6 +106,7 @@ if ($projectTitle9 != NULL && $projectTitleLink9 != NULL && $projectImage9 != NU
 
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -121,10 +121,7 @@ if ($projectTitle9 != NULL && $projectTitleLink9 != NULL && $projectImage9 != NU
 
     <div>
         <h2>Current Values</h2>
-        <textarea name="projectId" cols="20" rows="10" maxlength="500"><?php echo returnProjectIds($projectInfo); ?></textarea>
-        <textarea name="projectTitle" cols="20" rows="10" maxlength="500"><?php echo returnProjectTitles($projectInfo); ?></textarea>
-        <textarea name="projectTitleLink" cols="100" rows="10" maxlength="500"><?php echo returnProjectTitleLinks($projectInfo); ?></textarea>
-        <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo returnProjectImages($projectInfo); ?></textarea>
+        <?php echo returnProjectInfo($projectInfo);?>
     </div>
 
     <div>
