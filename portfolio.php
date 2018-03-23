@@ -3,20 +3,11 @@
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$projectTitleQuery = $db->prepare("SELECT `projectTitle` FROM `portfolio`");
-$projectTitleQuery->execute();
-$projectTitle = $projectTitleQuery->fetchAll();
 
-$projectTitleLinkQuery = $db->prepare("SELECT `projectTitleLink` FROM `portfolio`");
-$projectTitleLinkQuery->execute();
-$projectTitleLink = $projectTitleLinkQuery->fetchAll();
-
-$projectImageQuery = $db->prepare("SELECT `projectImage` FROM `portfolio`");
-$projectImageQuery->execute();
-$projectImage = $projectImageQuery->fetchAll();
 
 require_once 'functions.php';
 $footerContent = getFooterContent($db);
+$projectContent = getProjectContent($db);
 
 ?>
 
@@ -48,45 +39,45 @@ $footerContent = getFooterContent($db);
 
         <main>
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[0]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[0]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[0]['projectTitleLink'];?>">
+                        <?php echo $projectContent[0]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[0]['projectImage'];?>">
+                <img src="<?php echo $projectContent[0]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[1]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[1]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[1]['projectTitleLink'];?>">
+                        <?php echo $projectContent[1]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[1]['projectImage'];?>">
+                <img src="<?php echo $projectContent[1]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[2]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[2]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[2]['projectTitleLink'];?>">
+                        <?php echo $projectContent[2]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[2]['projectImage'];?>">
+                <img src="<?php echo $projectContent[2]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[3]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[3]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[3]['projectTitleLink'];?>">
+                        <?php echo $projectContent[3]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[3]['projectImage'];?>">
+                <img src="<?php echo $projectContent[3]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[4]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[4]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[4]['projectTitleLink'];?>">
+                        <?php echo $projectContent[4]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[4]['projectImage'];?>">
+                <img src="<?php echo $projectContent[4]['projectImage'];?>">
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[5]['projectTitleLink'];?>">
-                        <?php echo $projectTitle[5]['projectTitle'];?>
+                <h2><a href="<?php echo $projectContent[5]['projectTitleLink'];?>">
+                        <?php echo $projectContent[5]['projectTitle'];?>
                     </a></h2>
-                <img src="<?php echo $projectImage[5]['projectImage'];?>">
+                <img src="<?php echo $projectContent[5]['projectImage'];?>">
             </div>
         </main>
 

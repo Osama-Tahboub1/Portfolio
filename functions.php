@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Returns an associative array with content from aboutMeArticle table from database.
+ * Returns an associative array with content from aboutMe table from database.
  *
  * @param $db PDO database link and credentials PDO object.
  *
@@ -26,6 +26,20 @@ function getFooterContent(PDO $db):array {
     $footerContentQuery->execute();
     $footerContent = $footerContentQuery->fetchAll();
     return $footerContent;
+}
+
+/*
+ * Returns an associative array with content from portfolio table from database.
+ *
+ * @param $db PDO database link and credentials PDO object.
+ *
+ * @return array returns associative array with arrays containing content from portfolio table from database.
+ */
+function getProjectContent(PDO $db):array {
+    $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`  FROM `portfolio`");
+    $projectContentQuery->execute();
+    $projectContent = $projectContentQuery->fetchAll();
+    return $projectContent;
 }
 
 /*
