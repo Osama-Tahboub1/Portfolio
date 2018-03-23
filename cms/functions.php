@@ -5,7 +5,7 @@
  *
  * @param $array array associative array provided by database.
  *
- * @return string a list of project titles in the arrays within the arrays pulled from the database.
+ * @return string a list of project titles in arrays within an arrays pulled from the database.
  */
 function returnProjectTitles(array $array):string {
     $titles = '';
