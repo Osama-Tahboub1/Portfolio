@@ -120,7 +120,6 @@ if ($projectTitle9 != NULL && $projectTitleLink9 != NULL && $projectImage9 != NU
 <h1>Portfolio</h1>
 
     <div>
-        <h2>Current Values</h2>
         <?php echo returnProjectInfo($projectInfo);?>
     </div>
 
@@ -198,38 +197,4 @@ if ($projectTitle9 != NULL && $projectTitleLink9 != NULL && $projectImage9 != NU
     </div>
 
     <div>
-        <h2>Project 7</h2>
-        <form method="post" action="portfolio.php">
-            <textarea name="projectId7" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 7); ?></textarea>
-            <textarea name="projectTitle7" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 7); ?></textarea>
-            <textarea name="projectTitleLink7" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 7); ?></textarea>
-            <textarea name="projectImage7" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 7); ?></textarea>
-            <p></p>
-            <input type="submit" value="Update">
-        </form>
-    </div>
-
-    <div>
-        <h2>Project 8</h2>
-        <form method="post" action="portfolio.php">
-            <textarea name="projectId8" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 8); ?></textarea>
-            <textarea name="projectTitle8" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 8); ?></textarea>
-            <textarea name="projectTitleLink8" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 8); ?></textarea>
-            <textarea name="projectImage8" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 8); ?></textarea>
-            <p></p>
-            <input type="submit" value="Update">
-        </form>
-    </div>
-
-    <div>
-        <h2>Project 9</h2>
-        <form method="post" action="portfolio.php">
-            <textarea name="projectId9" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 9); ?></textarea>
-            <textarea name="projectTitle9" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 9); ?></textarea>
-            <textarea name="projectTitleLink9" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 9); ?></textarea>
-            <textarea name="projectImage9" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 9); ?></textarea>
-            <p></p>
-            <input type="submit" value="Update">
-        </form>
-    </div>
 </body>
