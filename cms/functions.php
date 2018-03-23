@@ -50,12 +50,10 @@ function returnProjectInfo(array $projectInfoArray) {
  *
  * @return string the title content for a single record.
  */
-function returnProjectTitle(array $array, int $recId):string { // change title to record
+function returnProjectTitle(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectTitleArray = $array[$index];
-    $projectTitle = '';
-    $projectTitle .=$projectTitleArray['projectTitle'];
-    return $projectTitle;
+    $projectTitleArray = $projectInfoArray[$index];
+    return $projectTitleArray['projectTitle'];
 }
 
 /*
@@ -66,12 +64,10 @@ function returnProjectTitle(array $array, int $recId):string { // change title t
  *
  * @return string the title link content for a single record.
  */
-function returnProjectTitleLink(array $array, int $recId):string {
+function returnProjectTitleLink(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectTitleLinkArray = $array[$index];
-    $projectTitleLink = '';
-    $projectTitleLink .= $projectTitleLinkArray["projectTitleLink"];
-    return $projectTitleLink;
+    $projectTitleLinkArray = $projectInfoArray[$index];
+    return $projectTitleLinkArray["projectTitleLink"];
 }
 
 /*
@@ -82,12 +78,10 @@ function returnProjectTitleLink(array $array, int $recId):string {
  *
  * @return string the project image link for a single record.
  */
-function returnProjectImage(array $array, int $recId):string {
+function returnProjectImage(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectImageArray = $array[$index];
-    $projectImage = '';
-    $projectImage .= $projectImageArray['projectImage'];
-    return $projectImage;
+    $projectImageArray = $projectInfoArray[$index];
+    return $projectImageArray['projectImage'];
 }
 
 /*
@@ -98,12 +92,10 @@ function returnProjectImage(array $array, int $recId):string {
  *
  * @return string an id or key for a single record.
  */
-function returnProjectId(array $array, int $recId):string {
+function returnProjectId(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectIdArray = $array[$index];
-    $projectId = '';
-    $projectId .= $projectIdArray['id'];
-    return $projectId;
+    $projectIdArray = $projectInfoArray[$index];
+    return $projectIdArray['id'];
 }
 
 /*
@@ -113,10 +105,10 @@ function returnProjectId(array $array, int $recId):string {
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnArticle(array $array):string {
+function returnArticle(array $aboutMeArray):string {
     $article = '';
 
-    foreach ($array as $value) {
+    foreach ($aboutMeArray as $value) {
         $article .= $value['aboutMeArticle']."\n"."\n";
     }
     return $article;
