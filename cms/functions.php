@@ -190,7 +190,6 @@ function getUserCredentials(PDO $db):array {
  */
 function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
 
-
     if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
         return true;
     } else {
@@ -201,9 +200,9 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
 /*
  * Directs to admin page or echoes instructions depending on credentials check.
  *
- *  @param $actualUserName string username stored credential.
+ * @param $actualUserName string username stored credential.
  * @param $actualPassword string password stored credential.
- * @param $inputUserName string form inout username.
+ * @param $inputUserName string form input username.
  * @param $inputPassword string form input password.
  *
  * @return bool returns true if both content types are string.
