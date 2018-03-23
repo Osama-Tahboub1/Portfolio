@@ -47,7 +47,7 @@ $footerContent = getFooterContent($db);
     <footer class="container">
         <div class="contactIcon">
             <span>Contact me</span>
-            <a href="mailto:<?php echo $footerContent[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
+            <a href="mailto:<?php echo $footerContent[0]['contactEmail'];?>?Subject=<?php echo $footerContent[0]['emailSubject'];?>"></a>
             <img src="<?php echo $footerContent[0]['contactIcon'];?>" alt="Email me icon">
             <a href="<?php echo $footerContent[0]['adminLoginLink'];?>"></a>
             <img src="<?php echo $footerContent[0]['adminLoginIcon'];?>">
@@ -55,7 +55,7 @@ $footerContent = getFooterContent($db);
 
         <div class="contactIconSmall">
             <span>Contact me</span>
-            <a href="mailto:<?php echo $footerContent[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>"></a>
+            <a href="mailto:<?php echo $footerContent[0]['contactEmail'];?>?Subject=<?php echo $footerContent[0]['emailSubject'];?>"></a>
             <img src="<?php echo $footerContent[0]['smallContactIcon'];?>" alt="Email me icon">
         </div>
     </footer>
