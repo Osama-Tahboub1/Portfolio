@@ -69,45 +69,70 @@ $adminLoginLink = $adminLoginLinkQuery->fetchAll();
 
         <main>
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[0]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[0]['projectTitleLink'];?>">
                         <?php echo $projectTitle[0]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[0]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[0]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[0]['projectImage'];?>">
+                </a>
+
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[1]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[1]['projectTitleLink'];?>">
                         <?php echo $projectTitle[1]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[1]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[1]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[1]['projectImage'];?>">
+                </a>
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[2]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[2]['projectTitleLink'];?>">
                         <?php echo $projectTitle[2]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[2]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[2]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[2]['projectImage'];?>">
+                </a>
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[3]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[3]['projectTitleLink'];?>">
                         <?php echo $projectTitle[3]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[3]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[3]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[3]['projectImage'];?>">
+                </a>
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[4]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[4]['projectTitleLink'];?>">
                         <?php echo $projectTitle[4]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[4]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[4]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[4]['projectImage'];?>">
+                </a>
             </div>
 
             <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectTitleLink[5]['projectTitleLink'];?>">
+                <h2>
+                    <a href="<?php echo $projectTitleLink[5]['projectTitleLink'];?>">
                         <?php echo $projectTitle[5]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectImage[5]['projectImage'];?>">
+                    </a>
+                </h2>
+                <a href="<?php echo $projectTitleLink[5]['projectTitleLink'];?>">
+                    <img src="<?php echo $projectImage[5]['projectImage'];?>">
+                </a>
             </div>
         </main>
 
