@@ -160,9 +160,9 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
     $query->bindParam (':projectId', $projectId);
 
     $query->execute();
+    $projectInfo = getProjectInfo($db);
 
-    $updatedInfo = $projectId.' '. $projectTitle.' '.$projectTitleLink.' '.$projectImage;
-    return $updatedInfo;
+    return $updatedInfo = returnProjectId($projectInfo, $projectId) .' '.returnProjectTitle($projectInfo, $projectId).' '.returnProjectTitleLink($projectInfo, $projectId).' '.returnProjectImage($projectInfo, $projectId);
 }
 
 /*
