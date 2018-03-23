@@ -121,12 +121,9 @@ function returnArticle(array $aboutMeArray):string {
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnParagraph(array $array, int $id): string{
+function returnParagraph(array $paragraphArray, int $id): string{
     $index = $id - 1;
-    $paragraphArray = $array[$index];
-    $paragraph = '';
-    $paragraph .= $paragraphArray['aboutMeArticle'];
-    return $paragraph;
+    return $paragraphArray[$index]['aboutMeArticle'].'';
 }
 
 /*
