@@ -53,7 +53,7 @@ function returnProjectInfo(array $projectInfoArray) {
 function returnProjectTitle(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
     $projectTitleArray = $projectInfoArray[$index];
-    return $projectTitleArray['projectTitle'];
+    return $projectTitleArray['projectTitle'].'';
 }
 
 /*
@@ -67,7 +67,7 @@ function returnProjectTitle(array $projectInfoArray, int $recId):string {
 function returnProjectTitleLink(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
     $projectTitleLinkArray = $projectInfoArray[$index];
-    return $projectTitleLinkArray["projectTitleLink"];
+    return $projectTitleLinkArray["projectTitleLink"].'';
 }
 
 /*
@@ -81,7 +81,7 @@ function returnProjectTitleLink(array $projectInfoArray, int $recId):string {
 function returnProjectImage(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
     $projectImageArray = $projectInfoArray[$index];
-    return $projectImageArray['projectImage'];
+    return $projectImageArray['projectImage'].'';
 }
 
 /*
@@ -95,7 +95,7 @@ function returnProjectImage(array $projectInfoArray, int $recId):string {
 function returnProjectId(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
     $projectIdArray = $projectInfoArray[$index];
-    return $projectIdArray['id'];
+    return $projectIdArray['id'].'';
 }
 
 /*

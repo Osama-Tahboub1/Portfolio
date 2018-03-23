@@ -126,17 +126,17 @@ if ($projectTitle6 != NULL && $projectTitleLink6 != NULL && $projectImage6 != NU
         </form>
     </div>
 
-    <div>
-        <h2>Project 4</h2>
-        <form method="post" action="portfolio.php">
-            <textarea name="projectId4" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 4); ?></textarea>
-            <textarea name="projectTitle4" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 4); ?></textarea>
-            <textarea name="projectTitleLink4" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 4); ?></textarea>
-            <textarea name="projectImage4" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 4); ?></textarea>
-            <p></p>
-            <input type="submit" value="Update">
-        </form>
-    </div>
+<div>
+    <h2>Project 4</h2>
+    <form method="post" action="portfolio.php">
+        <textarea name="projectId4" cols="20" rows="5" maxlength="500"><?php echo returnProjectId($projectInfo, 4); ?></textarea>
+        <textarea name="projectTitle4" cols="20" rows="5" maxlength="500"><?php echo returnProjectTitle($projectInfo, 4); ?></textarea>
+        <textarea name="projectTitleLink4" cols="100" rows="5" maxlength="500"><?php echo returnProjectTitleLink($projectInfo, 4); ?></textarea>
+        <textarea name="projectImage4" cols="100" rows="5" maxlength="500"><?php echo returnProjectImage($projectInfo, 4); ?></textarea>
+        <p></p>
+        <input type="submit" value="Update">
+    </form>
+</div>
 
     <div>
         <h2>Project 5</h2>
