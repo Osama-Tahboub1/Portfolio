@@ -150,19 +150,19 @@ function getProjectInfo(PDO $db):array {
  *
  * @return array returns associative array with arrays containing content from portfolio table from database.
  */
-function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId) {
+function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId, array $projectInfo)
+{
 
     $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectImage, `projectTitleLink` = :projectTitleLink WHERE `id` = :projectId");
 
-    $query->bindParam (':projectTitle', $projectTitle);
-    $query->bindParam (':projectTitleLink', $projectTitleLink);
-    $query->bindParam (':projectImage', $projectImage);
-    $query->bindParam (':projectId', $projectId);
+    $query->bindParam(':projectTitle', $projectTitle);
+    $query->bindParam(':projectTitleLink', $projectTitleLink);
+    $query->bindParam(':projectImage', $projectImage);
+    $query->bindParam(':projectId', $projectId);
 
     $query->execute();
-    $projectInfo = getProjectInfo($db);
-
-    return $updatedInfo = returnProjectId($projectInfo, $projectId) .' '.returnProjectTitle($projectInfo, $projectId).' '.returnProjectTitleLink($projectInfo, $projectId).' '.returnProjectImage($projectInfo, $projectId);
+    
+    return $projectInfo;
 }
 
 /*
