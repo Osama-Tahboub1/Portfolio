@@ -175,7 +175,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
 function getUserCredentials(PDO $db):array {
     $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`");
     $userCredentialsQuery->execute();
-    return $userCredentials = $userCredentialsQuery->fetchAll();
+    return $userCredentialsQuery->fetchAll();
 }
 
 /*
