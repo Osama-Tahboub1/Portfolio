@@ -169,7 +169,6 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
  * Gets user credentials from the database.
  *
  * @param $db object database link and credentials PDO object.
-
  *
  * @return array returns associative array with arrays credentials from users and passwords tables from database.
  */
