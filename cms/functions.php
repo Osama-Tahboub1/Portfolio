@@ -209,8 +209,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
  */
 
 
-function loggedInSession(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword ):bool {
-    $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+function loggedInSession(bool $loginCheck ):bool {
 
     if ($loginCheck === true) {
         session_start();
