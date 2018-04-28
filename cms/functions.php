@@ -1,66 +1,48 @@
 <?php
 
-/* Doc Block
+/*
  * Returns all project titles from array content provided by database.
  *
  * @param $array array associative array provided by database.
  *
- * @return string a list of project titles in the arrays within the arrays pulled from the database.
+ * @return returns a form that contains values in the array provided.
  */
-function returnProjectTitles(array $array):string {
+function returnProjectInfo(array $projectInfoArray) {
+
+    $ids = '';
+    foreach ($projectInfoArray as $value) {
+        $ids .= $value["id"]."\n";
+    }
+
     $titles = '';
-    foreach ($array as $value) {
+    foreach ($projectInfoArray as $value) {
         $titles .=$value['projectTitle']."\n";
     }
-    return $titles;
-}
 
-/* Doc Block
- * Returns all project title links from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of project title links in the arrays within the arrays pulled from the database.
- */
-function returnProjectTitleLinks(array $array):string {
-    $titlesLinks = '';
-    foreach ($array as $value) {
-        $titlesLinks .= $value['projectTitleLink']."\n";
+    $titleLinks = '';
+    foreach ($projectInfoArray as $value) {
+        $titleLinks .= $value['projectTitleLink']."\n";
     }
-    return $titlesLinks;
-}
 
-/* Doc Block
- * Returns all project image links from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of project image links in the arrays within the arrays pulled from the database.
- */
-function returnProjectImages(array $array):string {
-    $projectImages = '';
-    foreach ($array as $value) {
-        $projectImages .= $value['projectImage']."\n";
+    $Images = '';
+    foreach ($projectInfoArray as $value) {
+        $Images .= $value['projectImage']."\n";
     }
-    return $projectImages;
+
+    ?>
+    <div>
+        <h2>Current Values</h2>
+        <textarea name="projectId" cols="20" rows="10" maxlength="500"><?php echo $ids; ?></textarea>
+        <textarea name="projectTitle" cols="20" rows="10" maxlength="500"><?php echo $titles; ?></textarea>
+        <textarea name="projectTitleLink" cols="100" rows="10" maxlength="500"><?php echo $titleLinks; ?></textarea>
+        <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo $Images; ?></textarea>
+    </div>
+    <?php
 }
 
-/* Doc Block
- * Returns project id's from array content provided by database.
- *
- * @param $array array associative array provided by database.
- *
- * @return string a list of id's or keys in the arrays within the arrays pulled from the database.
- */
-function returnProjectIds(array $array):string {
-    $projectIds = '';
-    foreach ($array as $value) {
-        $projectIds .= $value["id"]."\n";
-    }
-    return $projectIds;
-}
 
-/* Doc Block
+
+/*
  * Returns a single project title from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -68,15 +50,13 @@ function returnProjectIds(array $array):string {
  *
  * @return string the title content for a single record.
  */
-function returnProjectTitle(array $array, int $recId):string { // change title to record
+function returnProjectTitle(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectTitleArray = $array[$index];
-    $projectTitle = '';
-    $projectTitle .=$projectTitleArray['projectTitle'];
-    return $projectTitle;
+    $projectTitleArray = $projectInfoArray[$index];
+    return $projectTitleArray['projectTitle'].'';
 }
 
-/* Doc Block
+/*
  * Returns project title link from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -84,15 +64,13 @@ function returnProjectTitle(array $array, int $recId):string { // change title t
  *
  * @return string the title link content for a single record.
  */
-function returnProjectTitleLink(array $array, int $recId):string {
+function returnProjectTitleLink(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectTitleLinkArray = $array[$index];
-    $projectTitleLink = '';
-    $projectTitleLink .= $projectTitleLinkArray["projectTitleLink"];
-    return $projectTitleLink;
+    $projectTitleLinkArray = $projectInfoArray[$index];
+    return $projectTitleLinkArray["projectTitleLink"].'';
 }
 
-/* Doc Block
+/*
  * Returns project image link from array content provided by database.
  *
  * @param $array array associative array provided by database query.
@@ -100,15 +78,13 @@ function returnProjectTitleLink(array $array, int $recId):string {
  *
  * @return string the project image link for a single record.
  */
-function returnProjectImage(array $array, int $recId):string {
+function returnProjectImage(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectImageArray = $array[$index];
-    $projectImage = '';
-    $projectImage .= $projectImageArray['projectImage'];
-    return $projectImage;
+    $projectImageArray = $projectInfoArray[$index];
+    return $projectImageArray['projectImage'].'';
 }
 
-/* Doc Block
+/*
  * Returns project id from array content provided by database.
  *
  * @param $array array associative array provided by database.
@@ -116,46 +92,41 @@ function returnProjectImage(array $array, int $recId):string {
  *
  * @return string an id or key for a single record.
  */
-function returnProjectId(array $array, int $recId):string {
+function returnProjectId(array $projectInfoArray, int $recId):string {
     $index = $recId - 1;
-    $projectIdArray = $array[$index];
-    $projectId = '';
-    $projectId .= $projectIdArray['id'];
-    return $projectId;
+    $projectIdArray = $projectInfoArray[$index];
+    return $projectIdArray['id'].'';
 }
 
-/* Doc Block
+/*
  * Returns article from array content provided by database.
  *
  * @param $array array associative array provided by database.
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnArticle(array $array):string {
+function returnArticle(array $aboutMeArray):string {
     $article = '';
 
-    foreach ($array as $value) {
+    foreach ($aboutMeArray as $value) {
         $article .= $value['aboutMeArticle']."\n"."\n";
     }
     return $article;
 }
 
-/* Doc Block
+/*
  * Returns single paragraph from array content provided by database.
  *
  * @param $array array associative array provided by database.
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnParagraph(array $array, int $id): string{
+function returnParagraph(array $paragraphArray, int $id):string {
     $index = $id - 1;
-    $paragraphArray = $array[$index];
-    $paragraph = '';
-    $paragraph .= $paragraphArray['aboutMeArticle'];
-    return $paragraph;
+    return $paragraphArray[$index]['aboutMeArticle'].'';
 }
 
-/* Doc Block
+/*
  * Returns an associative array with content from portfolio table from database.
  *
  * @param $db object database link and credentials PDO object.
@@ -168,7 +139,7 @@ function getProjectInfo(PDO $db):array {
     return $projectInfo = $projectInfoQuery->fetchAll();
 }
 
-/* Doc Block
+/*
  * Updates the values of a row in portfolio table in database.
  *
  * @param $db object database link and credentials PDO object.
@@ -179,36 +150,36 @@ function getProjectInfo(PDO $db):array {
  *
  * @return array returns associative array with arrays containing content from portfolio table from database.
  */
-function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId) {
+function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId, array $projectInfo)
+{
 
     $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectImage, `projectTitleLink` = :projectTitleLink WHERE `id` = :projectId");
 
-    $query->bindParam (':projectTitle',$projectTitle);
-    $query->bindParam (':projectTitleLink',$projectTitleLink);
-    $query->bindParam (':projectImage',$projectImage);
-    $query->bindParam (':projectId',$projectId);
+    $query->bindParam(':projectTitle', $projectTitle);
+    $query->bindParam(':projectTitleLink', $projectTitleLink);
+    $query->bindParam(':projectImage', $projectImage);
+    $query->bindParam(':projectId', $projectId);
 
     $query->execute();
 
-    $updatedInfo = $projectId.' '. $projectTitle.' '.$projectTitleLink.' '.$projectImage;
-    return $updatedInfo;
+    $index = $projectId - 1;
+    return $projectInfo[$index][$projectId].''.$projectInfo[$index][$projectTitle].''.$projectInfo[$index][$projectTitleLink].''.$projectInfo[$index][$projectImage];
 }
 
-/* Doc Block
+/*
  * Gets user credentials from the database.
  *
  * @param $db object database link and credentials PDO object.
-
  *
  * @return array returns associative array with arrays credentials from users and passwords tables from database.
  */
 function getUserCredentials(PDO $db):array {
     $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`");
     $userCredentialsQuery->execute();
-    return $userCredentials = $userCredentialsQuery->fetchAll();
+    return $userCredentialsQuery->fetchAll();
 }
 
-/* Doc Block
+/*
  * Checks login details are validated and match saved credentials.
  *
  * @param $actualUserName string username stored credential.
@@ -220,7 +191,6 @@ function getUserCredentials(PDO $db):array {
  */
 function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
 
-
     if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
         return true;
     } else {
@@ -228,20 +198,19 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
     }
 }
 
-/* Doc Block
+/*
  * Directs to admin page or echoes instructions depending on credentials check.
  *
- *  @param $actualUserName string username stored credential.
+ * @param $actualUserName string username stored credential.
  * @param $actualPassword string password stored credential.
- * @param $inputUserName string form inout username.
+ * @param $inputUserName string form input username.
  * @param $inputPassword string form input password.
  *
  * @return bool returns true if both content types are string.
  */
 
 
-function loggedInSession(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword ):bool {
-    $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+function loggedInSession(bool $loginCheck ):bool {
 
     if ($loginCheck === true) {
         session_start();

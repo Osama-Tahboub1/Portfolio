@@ -1,6 +1,5 @@
 <?php
 
-
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
@@ -15,10 +14,9 @@ $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 
 if ($inputUserName != NULL && $inputPassword != NULL) {
-    loggedInSession($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+    $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+    loggedInSession($loginCheck);
 }
-
-
 
 ?>
 
