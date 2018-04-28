@@ -201,10 +201,7 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
 /*
  * Directs to admin page or echoes instructions depending on credentials check.
  *
- * @param $actualUserName string username stored credential.
- * @param $actualPassword string password stored credential.
- * @param $inputUserName string form input username.
- * @param $inputPassword string form input password.
+ * @param $loginCheck bool return from checkCredentials being passed in.
  *
  * @return bool returns true if both content types are string.
  */
