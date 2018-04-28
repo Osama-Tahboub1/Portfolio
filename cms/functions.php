@@ -161,8 +161,9 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
     $query->bindParam(':projectId', $projectId);
 
     $query->execute();
-    
-    return $projectInfo;
+
+    $index = $projectId - 1;
+    return $projectInfo[$index][$projectId].''.$projectInfo[$index][$projectTitle].''.$projectInfo[$index][$projectTitleLink].''.$projectInfo[$index][$projectImage];
 }
 
 /*
