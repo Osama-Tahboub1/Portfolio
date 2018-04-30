@@ -152,14 +152,12 @@ function getProjectInfo(PDO $db):array {
  */
 function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, string $projectId, array $projectInfo)
 {
-
     $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectImage, `projectTitleLink` = :projectTitleLink WHERE `id` = :projectId");
 
     $query->bindParam(':projectTitle', $projectTitle);
     $query->bindParam(':projectTitleLink', $projectTitleLink);
     $query->bindParam(':projectImage', $projectImage);
     $query->bindParam(':projectId', $projectId);
-
     $query->execute();
 
     $index = $projectId - 1;
