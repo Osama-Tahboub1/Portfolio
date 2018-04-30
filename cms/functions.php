@@ -187,13 +187,19 @@ function getUserCredentials(PDO $db):array {
  * @param $inputUserName string form inout username.
  * @param $inputPassword string form input password.
  *
- * @return bool returns true if both content types are string.
+ * @return bool returns true if credentials are matched.
  */
 function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
 
     if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
+        session_start();
+        $_SESSION['loggedIn'] = true;
+        header('Location: admin.php');
         return true;
     } else {
+        session_start();
+        $_SESSION['loggedIn'] = false;
+        echo 'Please enter user name and password';
         return false;
     }
 }
@@ -201,26 +207,18 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
 /*
  * Directs to admin page or echoes instructions depending on credentials check.
  *
- * @param $loginCheck bool return from checkCredentials being passed in.
- *
  * @return bool returns true if both content types are string.
  */
 
 
-function loggedInSession(bool $loginCheck ):bool {
+function loggedInStatus():bool {
+    session_start();
 
-    if ($loginCheck === true) {
-        session_start();
-        $_SESSION['loggedIn'] = true;
-        header('Location: admin.php');
-        return true;
-
-    } else {
-        session_start();
-        $_SESSION['loggedIn'] = false;
+    if ($_SESSION['loggedIn'] !== true) {
         echo 'Please log in';
         header('Location: admin.php');
         return false;
+    } else {
+        return true;
     }
 }
-

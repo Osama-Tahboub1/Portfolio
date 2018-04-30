@@ -14,8 +14,9 @@ $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 
 if ($inputUserName != NULL && $inputPassword != NULL) {
-    $loginCheck = checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
-    loggedInSession($loginCheck);
+    checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+} else {
+    echo 'Please enter user name and password';
 }
 
 ?>
