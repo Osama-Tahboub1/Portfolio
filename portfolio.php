@@ -38,47 +38,9 @@ $projectContent = getProjectContent($db);
         </header>
 
         <main>
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[0]['projectTitleLink'];?>">
-                        <?php echo $projectContent[0]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[0]['projectImage'];?>">
-            </div>
-
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[1]['projectTitleLink'];?>">
-                        <?php echo $projectContent[1]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[1]['projectImage'];?>">
-            </div>
-
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[2]['projectTitleLink'];?>">
-                        <?php echo $projectContent[2]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[2]['projectImage'];?>">
-            </div>
-
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[3]['projectTitleLink'];?>">
-                        <?php echo $projectContent[3]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[3]['projectImage'];?>">
-            </div>
-
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[4]['projectTitleLink'];?>">
-                        <?php echo $projectContent[4]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[4]['projectImage'];?>">
-            </div>
-
-            <div class="col3 col2Sm">
-                <h2><a href="<?php echo $projectContent[5]['projectTitleLink'];?>">
-                        <?php echo $projectContent[5]['projectTitle'];?>
-                    </a></h2>
-                <img src="<?php echo $projectContent[5]['projectImage'];?>">
-            </div>
+            <?php
+            getPortfolio($projectContent);
+            ?>
         </main>
 
         <footer class="container">

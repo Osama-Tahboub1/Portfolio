@@ -56,3 +56,24 @@ function insertParagraph(array $array):string {
     }
     return $paragraph;
 }
+
+/*
+ * Adds projects contents from array into portfolio.
+ *
+ * @param $$projectContent array associative array containing arrays with portfolio project contents.
+ *
+ * @return string the text content of an array pulled from the database.
+ */
+function getPortfolio ($projectContent)
+{
+    foreach ($projectContent as $arr) {
+        ?>
+        <div class="col3 col2Sm">
+            <h2><a href="<?php echo $arr['projectTitleLink']; ?>">
+                    <?php echo $arr['projectTitle']; ?>
+                </a></h2>
+            <img src="<?php echo $arr['projectImage']; ?>">
+        </div>
+        <?php
+    }
+}
