@@ -40,64 +40,6 @@ function returnProjectInfo(array $projectInfoArray) {
     <?php
 }
 
-
-
-/*
- * Returns a single project title from array content provided by database.
- *
- * @param $array array associative array provided by database query.
- * @param $recId int number pointing to the record id number in the database.
- *
- * @return string the title content for a single record.
- */
-function returnProjectTitle(array $projectInfoArray, int $recId):string {
-    $index = $recId - 1;
-    $projectTitleArray = $projectInfoArray[$index];
-    return $projectTitleArray['projectTitle'].'';
-}
-
-/*
- * Returns project title link from array content provided by database.
- *
- * @param $array array associative array provided by database query.
- * @param $recId int number pointing to the record id number in the database.
- *
- * @return string the title link content for a single record.
- */
-function returnProjectTitleLink(array $projectInfoArray, int $recId):string {
-    $index = $recId - 1;
-    $projectTitleLinkArray = $projectInfoArray[$index];
-    return $projectTitleLinkArray["projectTitleLink"].'';
-}
-
-/*
- * Returns project image link from array content provided by database.
- *
- * @param $array array associative array provided by database query.
- * @param $recId int number pointing to the record id number in the database.
- *
- * @return string the project image link for a single record.
- */
-function returnProjectImage(array $projectInfoArray, int $recId):string {
-    $index = $recId - 1;
-    $projectImageArray = $projectInfoArray[$index];
-    return $projectImageArray['projectImage'].'';
-}
-
-/*
- * Returns project id from array content provided by database.
- *
- * @param $array array associative array provided by database.
- * @param $recId int number pointing to the record id number in the database.
- *
- * @return string an id or key for a single record.
- */
-function returnProjectId(array $projectInfoArray, int $recId):string {
-    $index = $recId - 1;
-    $projectIdArray = $projectInfoArray[$index];
-    return $projectIdArray['id'].'';
-}
-
 /*
  * Returns article from array content provided by database.
  *
