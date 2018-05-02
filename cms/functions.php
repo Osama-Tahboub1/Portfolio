@@ -7,7 +7,7 @@
  *
  * @return returns a form that contains values in the array provided.
  */
-function returnProjectInfo(array $projectInfoArray) {
+function returnProjectInfo(array $projectInfoArray):string {
 
     $ids = '';
     foreach ($projectInfoArray as $value) {
@@ -29,15 +29,17 @@ function returnProjectInfo(array $projectInfoArray) {
         $Images .= $value['projectImage']."\n";
     }
 
-    ?>
+    $form = "
     <div>
         <h2>Current Values</h2>
-        <textarea name="projectId" cols="20" rows="10" maxlength="500"><?php echo $ids; ?></textarea>
-        <textarea name="projectTitle" cols="20" rows="10" maxlength="500"><?php echo $titles; ?></textarea>
-        <textarea name="projectTitleLink" cols="100" rows="10" maxlength="500"><?php echo $titleLinks; ?></textarea>
-        <textarea name="projectImage" cols="100" rows="10" maxlength="500"><?php echo $Images; ?></textarea>
+        <textarea name=\"projectId\" cols=\"20\" rows=\"10\" maxlength=\"500\">".$ids."</textarea>
+        <textarea name=\"projectTitle\" cols=\"20\" rows=\"10\" maxlength=\"500\">".$titles."</textarea>
+        <textarea name=\"projectTitleLink\" cols=\"100\" rows=\"10\" maxlength=\"500\">".$titleLinks."</textarea>
+        <textarea name=\"projectImage\" cols=\"100\" rows=\"10\" maxlength=\"500\">".$Images."</textarea>
     </div>
-    <?php
+    ";
+
+    return $form;
 }
 
 /*
