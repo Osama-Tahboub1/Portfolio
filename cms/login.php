@@ -30,10 +30,10 @@ if ($inputUserName != NULL && $inputPassword != NULL) {
     <title>Login Page</title>
 </head>
 <body>
-<form method="post" action="login.php">
-    <input type="name" name="userName">
-    <input type="name" name="password">
-    <input type="submit">
-</form>
-
+    <form method="post" action="login.php">
+        <input type="name" name="userName">
+        <input type="name" name="password">
+        <input type="submit">
+    </form>
 </body>
+</html>
