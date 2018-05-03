@@ -1,24 +1,25 @@
 <?php
 
-
 $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
 
-$credentials = getUserCredentials($db);
+$credentialsArray = getUserCredentials($db);
 
-$actualUserName = $credentials[0]['name'];
-$actualPassword = $credentials[0]['password'];
+foreach ($credentialsArray as $credentials) {
+    $actualUserName = $credentials['name'];
+    $actualPassword = $credentials['password'];
+}
 
 $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 
 if ($inputUserName != NULL && $inputPassword != NULL) {
-    loggedInSession($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+    checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+} else {
+    echo 'Please enter user name and password';
 }
-
-
 
 ?>
 
@@ -29,10 +30,10 @@ if ($inputUserName != NULL && $inputPassword != NULL) {
     <title>Login Page</title>
 </head>
 <body>
-<form method="post" action="login.php">
-    <input type="name" name="userName">
-    <input type="name" name="password">
-    <input type="submit">
-</form>
-
+    <form method="post" action="login.php">
+        <input type="name" name="userName">
+        <input type="name" name="password">
+        <input type="submit">
+    </form>
 </body>
+</html>

@@ -1,12 +1,7 @@
 <?php
 
-session_start();
-
-if ($_SESSION['loggedIn'] !== true) {
-    header('Location: instructions.php');
-}
-
-
+require_once 'functions.php';
+loggedInStatus();
 
 ?>
 
@@ -17,9 +12,11 @@ if ($_SESSION['loggedIn'] !== true) {
     <title>Content Management System</title>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="portfolio.php">Portfolio</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="about.php">About Me</a></li>
+        </ul>
+    </nav>
 </body>
+</html>
