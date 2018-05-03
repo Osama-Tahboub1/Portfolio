@@ -10,7 +10,6 @@ $paragraphId = $_POST['paragraphId'];
 
 if ($paragraph != NULL && $paragraphId!= NULL) {
     updateParagraph($db, $paragraph, $paragraphId);
-    //refresh page
 } else {
     echo"all fields must be full to add a paragraph";
 }
