@@ -135,7 +135,7 @@ main {
     padding: 0px 5px;
     }
 
-    .contactIcon {
+    .browsingIcons {
         display: block;
         position: fixed;
         top: 53%;
@@ -183,7 +183,7 @@ main {
     .contactIconSmall {
         display: block;
         position: fixed;
-        top: 25%;
+        bottom: 15%;
         right: 5px;
     }
 
