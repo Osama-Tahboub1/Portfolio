@@ -118,24 +118,6 @@ main {
     color: #ffffff;
 }
 
-.ieLegacy .contactIcon img,
-.ieLegacy .contactIconSmall img {
-    display: none;
-}
-
-.ieLegacy .contactIcon a,
-.ieLegacy .contactIconSmall a {
-    position: static;
-}
-
-.ieLegacy .contactIcon span,
-.ieLegacy .contactIconSmall span {
-    display: inline;
-    font-size: 1rem;
-    position: absolute;
-}
-
-
 @media screen and (max-width: 1080px){
 
     nav {
