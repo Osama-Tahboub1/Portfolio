@@ -1,11 +1,11 @@
 <?php
 
 /*
- * Returns an associative array with content from aboutMe table from database.
+ * Returns an associative array with content from aboutMe table.
  *
- * @param $db PDO database link and credentials PDO object.
+ * @param $db PDO object connection to the database.
  *
- * @return array returns associative array with arrays containing content from aboutMe table from database.
+ * @return array returns associative array with arrays containing content from aboutMe table.
  */
 function getAboutMeArticle(PDO $db):array {
     $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
@@ -17,7 +17,7 @@ function getAboutMeArticle(PDO $db):array {
 /*
  * Resolves array fetched and embeds its values into a string that contains html.
  *
- * @param $db PDO database link and credentials PDO object.
+ * @param $db PDO object connection to the database.
  *
  * @return string returns string with that has html tags with embedded values.
  */
@@ -56,11 +56,11 @@ function getFooterContent(PDO $db):string {
 }
 
 /*
- * Returns an associative array with content from portfolio table from database.
+ * Returns an associative array with content from portfolio table.
  *
- * @param $db PDO database link and credentials PDO object.
+ * @param $db PDO object connection to the database.
  *
- * @return array returns associative array with arrays containing content from portfolio table from database.
+ * @return array returns associative array with arrays containing content from portfolio table.
  */
 function getProjectContent(PDO $db):array {
     $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`  FROM `portfolio`");
@@ -70,11 +70,11 @@ function getProjectContent(PDO $db):array {
 }
 
 /*
- * Adds paragraph from array content provided by database.
+ * Adds paragraph from array content.
  *
- * @param $array array associative array provided by database.
+ * @param $array array associative array.
  *
- * @return string the text content of an array pulled from the database.
+ * @return string the text content of an array.
  */
 function insertParagraph(array $array):string {
     $paragraph = '';
@@ -89,7 +89,7 @@ function insertParagraph(array $array):string {
  *
  * @param $$projectContent array associative array containing arrays with portfolio project contents.
  *
- * @return string the text content of an array pulled from the database.
+ * @return string the text content of an array.
  */
 function getPortfolio ($projectContent)
 {

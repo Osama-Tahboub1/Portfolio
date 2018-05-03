@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Returns all project titles from array content provided by database.
+ * Returns all project titles from array content.
  *
- * @param $array array associative array provided by database.
+ * @param $array array associative array.
  *
  * @return returns a form that contains values in the array provided.
  */
@@ -43,11 +43,11 @@ function returnProjectInfo(array $projectInfoArray):string {
 }
 
 /*
- * Returns article from array content provided by database.
+ * Returns article from array content.
  *
- * @param $bd PDO object connection to the database.
+ * @param $db PDO object connection to the database.
  *
- * @return string the content of the arrays within the arrays pulled from the database.
+ * @return string the content of the arrays within the arrays.
  */
 function getArticle(PDO $db):string {
     $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
@@ -69,11 +69,11 @@ function getArticle(PDO $db):string {
 }
 
 /*
-* Updates the values of a row in aboutMe table in database.
+* Updates the values of a row in aboutMe table.
  *
- * @param $db object database link and credentials PDO object.
- * @param $paragraph string used with post from form and passed in to update the aboutMe table in database.
- * @param $paragraphId int used with post from form and passed in to update the aboutMe table in database.
+ * @param $db PDO object connection to the database.
+ * @param $paragraph string used with post from form and passed in to update the aboutMe table.
+ * @param $paragraphId int used with post from form and passed in to update the aboutMe table.
  *
  */
 function updateParagraph(PDO $db, string $paragraph, int $paragraphId)
@@ -86,11 +86,11 @@ function updateParagraph(PDO $db, string $paragraph, int $paragraphId)
 }
 
 /*
- * Returns an associative array with content from portfolio table from database.
+ * Returns an associative array with content from portfolio table.
  *
- * @param $db object database link and credentials PDO object.
+ * @param $db PDO object connection to the database.
  *
- * @return array returns associative array with arrays containing content from portfolio table from database.
+ * @return array returns associative array with arrays containing content from portfolio table.
  */
 function getProjectInfo(PDO $db):array {
     $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio`;");
@@ -99,13 +99,13 @@ function getProjectInfo(PDO $db):array {
 }
 
 /*
- * Updates the values of a row in portfolio table in database.
+ * Updates the values of a row in portfolio table.
  *
- * @param $db object database link and credentials PDO object.
- * @param $projectTitle string used with post from form and passed in to update the portfolio table in database.
- * @param $projectTitleLink string used with post from form and passed in to update the portfolio table in database.
- * @param $projectImage string object used with post from form and passed in to update the portfolio table in database.
- * @param $projectId string used with post from form and passed in to update the portfolio table in database.
+ * @param $db PDO object connection to the database.
+ * @param $projectTitle string used with post from form and passed in to update the portfolio table.
+ * @param $projectTitleLink string used with post from form and passed in to update the portfolio table.
+ * @param $projectImage string object used with post from form and passed in to update the portfolio table.
+ * @param $projectId string used with post from form and passed in to update the portfolio table.
  *
  */
 function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, int $projectId)
@@ -120,11 +120,11 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
 }
 
 /*
- * Gets user credentials from the database.
+ * Gets user credentials.
  *
- * @param $db object database link and credentials PDO object.
+ * @param $db PDO object connection to the database.
  *
- * @return array returns associative array with arrays credentials from users and passwords tables from database.
+ * @return array returns associative array with arrays credentials from users and passwords tables.
  */
 function getUserCredentials(PDO $db):array {
     $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`;");
