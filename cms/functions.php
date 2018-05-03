@@ -45,17 +45,27 @@ function returnProjectInfo(array $projectInfoArray):string {
 /*
  * Returns article from array content provided by database.
  *
- * @param $array array associative array provided by database.
+ * @param $bd PDO object connection to the database.
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnArticle(array $aboutMeArray):string {
-    $article = '';
+function returnArticle(PDO $db):string {
+    $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
+    $aboutMeArticleQuery->execute();
+    $aboutMeArticle = $aboutMeArticleQuery->fetchAll();
+    $paragraph = '';
 
-    foreach ($aboutMeArray as $value) {
-        $article .= $value['aboutMeArticle']."\n"."\n";
+    foreach ($aboutMeArticle as $value) {
+            $paragraph .= $value['aboutMeArticle']."\n"."\n";
     }
-    return $article;
+
+        $article = "
+    <h1>About me article</h1>
+        <div>
+            <textarea name=\"aboutMe\" cols=\"50\" rows=\"15\" maxlength=\"500\">".$paragraph."</textarea>
+        </div>
+    ";
+        return $article;
 }
 
 /*
