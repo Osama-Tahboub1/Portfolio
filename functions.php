@@ -22,7 +22,7 @@ function getAboutMeArticle(PDO $db):array {
  * @return string returns string with that has html tags with embedded values.
  */
 function getFooterContent(PDO $db):string {
-    $footerContentQuery = $db->prepare("SELECT `contactIcon`, `smallContactIcon`, `contactEmail`, `emailSubject`, `adminLoginIcon`, `adminLoginLink`   FROM `footer`");
+    $footerContentQuery = $db->prepare("SELECT `contactIcon`, `smallContactIcon`, `contactEmail`, `emailSubject`, `adminLoginIcon`, `adminLoginLink`   FROM `footer`;");
     $footerContentQuery->execute();
     $footerArray = $footerContentQuery->fetchAll();
 
@@ -61,7 +61,7 @@ function getFooterContent(PDO $db):string {
  * @return array returns associative array with arrays containing content from portfolio table.
  */
 function getProjectContent(PDO $db):array {
-    $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`  FROM `portfolio`");
+    $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`  FROM `portfolio` WHERE `projectTitle` IS NOT NULL;");
     $projectContentQuery->execute();
     $projectContent = $projectContentQuery->fetchAll();
     return $projectContent;
