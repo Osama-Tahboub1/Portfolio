@@ -69,15 +69,20 @@ function returnArticle(PDO $db):string {
 }
 
 /*
- * Returns single paragraph from array content provided by database.
+* Updates the values of a row in aboutMe table in database.
  *
- * @param $array array associative array provided by database.
+ * @param $db object database link and credentials PDO object.
+ * @param $paragraph string used with post from form and passed in to update the aboutMe table in database.
+ * @param $paragraphId int used with post from form and passed in to update the aboutMe table in database.
  *
- * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnParagraph(array $paragraphArray, int $id):string {
-    $index = $id - 1;
-    return $paragraphArray[$index]['aboutMeArticle'].'';
+function updateParagraph(PDO $db, string $paragraph, int $paragraphId)
+{
+    $query = $db->prepare("UPDATE `aboutMe` SET `aboutMeArticle` = :paragraph WHERE `id` = :paragraphId;");
+
+    $query->bindParam(':paragraph', $paragraph);
+    $query->bindParam(':paragraphId', $paragraphId);
+    $query->execute();
 }
 
 /*
@@ -88,7 +93,7 @@ function returnParagraph(array $paragraphArray, int $id):string {
  * @return array returns associative array with arrays containing content from portfolio table from database.
  */
 function getProjectInfo(PDO $db):array {
-    $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio` ");
+    $projectInfoQuery = $db->prepare("SELECT `id`, `projectTitle`, `projectTitleLink`,`projectImage` FROM `portfolio`;");
     $projectInfoQuery->execute();
     return $projectInfo = $projectInfoQuery->fetchAll();
 }
@@ -102,11 +107,10 @@ function getProjectInfo(PDO $db):array {
  * @param $projectImage string object used with post from form and passed in to update the portfolio table in database.
  * @param $projectId string used with post from form and passed in to update the portfolio table in database.
  *
- * @return array returns associative array with arrays containing content from portfolio table from database.
  */
 function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, string $projectImage, int $projectId)
 {
-    $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectImage, `projectTitleLink` = :projectTitleLink WHERE `id` = :projectId");
+    $query = $db->prepare("UPDATE `portfolio` SET `projectTitle` = :projectTitle, `projectImage` = :projectImage, `projectTitleLink` = :projectTitleLink WHERE `id` = :projectId;");
 
     $query->bindParam(':projectTitle', $projectTitle);
     $query->bindParam(':projectTitleLink', $projectTitleLink);
@@ -123,7 +127,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
  * @return array returns associative array with arrays credentials from users and passwords tables from database.
  */
 function getUserCredentials(PDO $db):array {
-    $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`");
+    $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`;");
     $userCredentialsQuery->execute();
     return $userCredentialsQuery->fetchAll();
 }
