@@ -49,7 +49,7 @@ function returnProjectInfo(array $projectInfoArray):string {
  *
  * @return string the content of the arrays within the arrays pulled from the database.
  */
-function returnArticle(PDO $db):string {
+function getArticle(PDO $db):string {
     $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
     $aboutMeArticleQuery->execute();
     $aboutMeArticle = $aboutMeArticleQuery->fetchAll();

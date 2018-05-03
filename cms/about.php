@@ -25,7 +25,7 @@ if ($paragraph != NULL && $paragraphId!= NULL) {
 </head>
 <body>
     <div>
-        <?php echo returnArticle($db);?>
+        <?php echo getArticle($db);?>
     </div>
 
 
