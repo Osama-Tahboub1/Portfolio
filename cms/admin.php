@@ -12,10 +12,11 @@ loggedInStatus();
     <title>Content Management System</title>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="portfolio.php">Portfolio</a></li>
-        <li><a href="about.php">About Me</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="about.php">About Me</a></li>
+        </ul>
+    </nav>
 </body>
+</html>
