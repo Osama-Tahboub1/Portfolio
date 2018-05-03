@@ -5,10 +5,12 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
 
-$credentials = getUserCredentials($db);
+$credentialsArray = getUserCredentials($db);
 
-$actualUserName = $credentials[0]['name'];
-$actualPassword = $credentials[0]['password'];
+foreach ($credentialsArray as $credentials) {
+    $actualUserName = $credentials['name'];
+    $actualPassword = $credentials['password'];
+}
 
 $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
