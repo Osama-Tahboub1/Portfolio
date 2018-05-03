@@ -37,9 +37,7 @@ $footerContent = getFooterContent($db);
     <section class="container aboutMe">
         <article>
             <p>
-                <?php
-                echo insertParagraph($aboutMeArticle);
-                ?>
+                <?php echo insertParagraph($aboutMeArticle);?>
             </p>
         </article>
     </section>
