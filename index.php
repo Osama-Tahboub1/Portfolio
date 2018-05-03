@@ -4,7 +4,6 @@ $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
-$footerContent = getFooterContent($db);
 
 ?>
 
@@ -33,21 +32,7 @@ $footerContent = getFooterContent($db);
 </header>
 
 <footer class="container">
-    <div class="browsingIcons">
-        <span>Contact me</span>
-        <a href="mailto:<?php echo $contactEmail[0]['contactEmail'];?>?Subject=<?php echo $emailSubject[0]['emailSubject'];?>">
-            <img src="<?php echo $contactIcon[0]['contactIcon'];?>" alt="Email me icon">
-        </a>
-        <a href="<?php echo $adminLoginLink[0]['adminLoginLink'];?>">
-            <img src="<?php echo $adminLoginIcon[0]['adminLoginIcon'];?>" class="adminLinkIcon">
-        </a>
-    </div>
-
-    <div class="contactIconSmall">
-        <span>Contact me</span>
-        <a href="mailto:<?php echo $footerContent[0]['contactEmail'];?>?Subject=<?php echo $footerContent[0]['emailSubject'];?>"></a>
-        <img src="<?php echo $footerContent[0]['smallContactIcon'];?>" alt="Email me icon">
-    </div>
+    <?php echo $footerContent = getFooterContent($db);?>
 </footer>
 </body>
 </html>

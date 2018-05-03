@@ -15,17 +15,44 @@ function getAboutMeArticle(PDO $db):array {
 }
 
 /*
- * Returns an associative array with content from footer table from database.
+ * Resolves array fetched and embeds its values into a string that contains html.
  *
  * @param $db PDO database link and credentials PDO object.
  *
- * @return array returns associative array with arrays containing content from footer table from database.
+ * @return string returns string with that has html tags with embedded values.
  */
-function getFooterContent(PDO $db):array {
+function getFooterContent(PDO $db):string {
     $footerContentQuery = $db->prepare("SELECT `contactIcon`, `smallContactIcon`, `contactEmail`, `emailSubject`, `adminLoginIcon`, `adminLoginLink`   FROM `footer`");
     $footerContentQuery->execute();
-    $footerContent = $footerContentQuery->fetchAll();
-    return $footerContent;
+    $footerArray = $footerContentQuery->fetchAll();
+
+    foreach ($footerArray as $footerContent) {
+        $contactEmail = $footerContent['contactEmail'];
+        $emailSubject = $footerContent['emailSubject'];
+        $contactIcon = $footerContent['contactIcon'];
+        $smallContactIcon = $footerContent['smallContactIcon'];
+        $adminLoginLink = $footerContent['adminLoginLink'];
+        $adminLoginIcon = $footerContent['adminLoginIcon'];
+    }
+
+    $footer = "
+    <div class=\"browsingIcons\">
+        <span>Contact me</span>
+        <a href=\"mailto:".$contactEmail."?Subject=".$emailSubject."\">
+            <img src=\"".$contactIcon."\" alt=\"Email me icon\">
+        </a>
+        <a href=\"".$adminLoginLink."\">
+            <img src=\"".$adminLoginIcon."\" class=\"adminLinkIcon\">
+        </a>
+    </div>
+
+    <div class=\"contactIconSmall\">
+        <span>Contact me</span>
+        <a href=\"mailto:".$contactEmail."?Subject=".$emailSubject."\"></a>
+        <img src=\"".$smallContactIcon."\" alt=\"Email me icon\">
+    </div>
+    ";
+    return $footer;
 }
 
 /*
