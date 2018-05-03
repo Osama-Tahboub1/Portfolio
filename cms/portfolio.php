@@ -51,3 +51,4 @@ if ($projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL 
         </form>
     </div>
 </body>
+</html>
