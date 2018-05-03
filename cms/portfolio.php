@@ -4,6 +4,7 @@ $db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
+
 $projectInfo = getProjectInfo($db);
 
 $projectTitle = $_POST['projectTitle'];
@@ -34,19 +35,19 @@ if ($projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL 
         <?php echo returnProjectInfo($projectInfo);?>
     </div>
 
-<div>
-    <h2>Update Projects</h2>
-    <form method="post" action="portfolio.php">
-        <p>Project ID</p>
-        <textarea name="projectId" cols="20" rows="5" maxlength="500"></textarea>
-        <p>Project Title</p>
-        <textarea name="projectTitle" cols="20" rows="5" maxlength="500"></textarea>
-        <p>Project Title Link</p>
-        <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"></textarea>
-        <p>Project Image</p>
-        <textarea name="projectImage" cols="100" rows="5" maxlength="500"></textarea>
-        <p></p>
-        <input type="submit" value="Update">
-    </form>
-</div>
+    <div>
+        <h2>Update Projects</h2>
+        <form method="post" action="portfolio.php">
+            <p>Project ID</p>
+            <textarea name="projectId" cols="20" rows="5" maxlength="500"></textarea>
+            <p>Project Title</p>
+            <textarea name="projectTitle" cols="20" rows="5" maxlength="500"></textarea>
+            <p>Project Title Link</p>
+            <textarea name="projectTitleLink" cols="100" rows="5" maxlength="500"></textarea>
+            <p>Project Image</p>
+            <textarea name="projectImage" cols="100" rows="5" maxlength="500"></textarea>
+            <p></p>
+            <input type="submit" value="Update">
+        </form>
+    </div>
 </body>
