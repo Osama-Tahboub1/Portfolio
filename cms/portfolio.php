@@ -13,7 +13,7 @@ $projectImage = $_POST['projectImage'];
 $projectId = $_POST['projectId'];
 
 if ($projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL && $projectId!= NULL) {
-    $updatedInfo = updateProject($db, $projectTitle, $projectTitleLink, $projectImage, $projectId);
+    updateProject($db, $projectTitle, $projectTitleLink, $projectImage, $projectId);
     //refresh page
 } else {
     echo"all fields must be full to add a project";
