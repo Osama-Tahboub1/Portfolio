@@ -50,7 +50,7 @@ function returnProjectInfo(array $projectInfoArray):string {
  * @return string the content of the arrays within the arrays.
  */
 function getArticle(PDO $db):string {
-    $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe`;");
+    $aboutMeArticleQuery = $db->prepare("SELECT `aboutMeArticle` FROM `aboutMe` WHERE `aboutMeArticle` IS NOT NULL;");
     $aboutMeArticleQuery->execute();
     $aboutMeArticle = $aboutMeArticleQuery->fetchAll();
     $paragraph = '';
