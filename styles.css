@@ -70,13 +70,6 @@ a:link {
     padding: 15px;
 }
 
-
-
-.browsingIcons span,
-.contactIconSmall span {
-    display: none;
-}
-
 .contactIconSmall {
     display: none;
 }
