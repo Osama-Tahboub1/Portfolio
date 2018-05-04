@@ -28,7 +28,8 @@ require_once 'functions.php';
         </ul>
     </nav>
 
-    <h1 class="homePageTitle">Osama's Portfolio</h1>
+    <h1 class="homePageTitle">Osama Tahboub</h1>
+    <em>Full stack developer</em>
 </header>
 
 <footer class="container">

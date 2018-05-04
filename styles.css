@@ -26,11 +26,18 @@ nav {
 }
 
 header h1 {
-    position: fixed;
-    top: 40px;
+    position: relative;
+    top: 30px;
     left: 0;
-    padding: 1rem;
+    padding: 0 0 0 1rem;
+    margin-bottom: 0;
     font-size: 6rem;
+}
+
+header em {
+    position: relative;
+    padding: 0 0 0 1rem;
+    font-size: 3rem;
 }
 
 li {
