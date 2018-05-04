@@ -25,12 +25,15 @@ nav {
     background-color: rgba(102, 102, 102, 0.9);
 }
 
+.homePageTitle {
+    margin-bottom: 0;
+}
+
 header h1 {
     position: relative;
     top: 30px;
     left: 0;
     padding: 0 0 0 1rem;
-    margin-bottom: 0;
     font-size: 6rem;
 }
 
