@@ -22,7 +22,7 @@ function getAboutMeArticle(PDO $db):array {
  * @return string returns string with that has html tags with embedded values.
  */
 function getFooterContent(PDO $db):string {
-    $footerContentQuery = $db->prepare("SELECT `contactIcon`, `smallContactIcon`, `contactEmail`, `emailSubject`, `adminLoginIcon`, `adminLoginLink`   FROM `footer`;");
+    $footerContentQuery = $db->prepare("SELECT `contactIcon`, `smallContactIcon`, `contactEmail`, `emailSubject`  FROM `footer`;");
     $footerContentQuery->execute();
     $footerArray = $footerContentQuery->fetchAll();
 
@@ -31,17 +31,12 @@ function getFooterContent(PDO $db):string {
         $emailSubject = $footerContent['emailSubject'];
         $contactIcon = $footerContent['contactIcon'];
         $smallContactIcon = $footerContent['smallContactIcon'];
-        $adminLoginLink = $footerContent['adminLoginLink'];
-        $adminLoginIcon = $footerContent['adminLoginIcon'];
     }
 
     $footer = "
     <div class=\"browsingIcons\">
         <a href=\"mailto:".$contactEmail."?Subject=".$emailSubject."\">
             <img src=\"".$contactIcon."\" alt=\"Email me icon\">
-        </a>
-        <a href=\"".$adminLoginLink."\">
-            <img src=\"".$adminLoginIcon."\" class=\"adminLinkIcon\">
         </a>
     </div>
 
