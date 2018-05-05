@@ -25,19 +25,19 @@ nav {
     background-color: rgba(102, 102, 102, 0.9);
 }
 
-.homePageTitle {
-    margin-bottom: 0;
-}
-
-header h1 {
+.pageTitle h1 {
     position: relative;
-    top: 30px;
     left: 0;
     padding: 0 0 0 1rem;
     font-size: 6rem;
 }
 
-header em {
+.homePageTitle h1{
+    top: 30px;
+    margin-bottom: 0;
+}
+
+.pageTitle em {
     position: relative;
     padding: 0 0 0 1rem;
     font-size: 3rem;
@@ -59,7 +59,7 @@ a:visited {
     color: #ffffff;
 }
 
-a:hover{
+a:hover {
     border-bottom: solid;
     border-color: #ffffff;
 }
@@ -121,12 +121,14 @@ main {
         left: 0px;
         padding: 1rem;
         font-size: 2rem;
-}
-    header h1 {
+    }
+
+    .pageTitle h1,
+    .pageTitle em {
         display:none;
     }
 
-    .homePageTitle {
+    .pageTitle {
         display: block;
         font-size: 5rem;
         padding: 3rem 3rem 1rem 3rem;
@@ -160,11 +162,12 @@ main {
         height: 4rem;
     }
 
-    header h1 {
+    .pageTitle h1,
+    .pageTitle em {
         display:none;
     }
 
-    .homePageTitle {
+    .pageTitle {
         display: block;
         font-size: 2rem;
         padding: 1rem;

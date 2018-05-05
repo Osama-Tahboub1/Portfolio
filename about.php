@@ -31,7 +31,9 @@ $footerContent = getFooterContent($db);
             </ul>
         </nav>
 
-        <h1>About Me</h1>
+        <div class="pageTitle">
+            <h1>About Me</h1>
+        </div>
     </header>
 
     <section class="container aboutMe">
