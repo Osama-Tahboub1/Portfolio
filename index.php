@@ -29,7 +29,7 @@ require_once 'functions.php';
     </nav>
 
     <h1 class="homePageTitle">Osama Tahboub</h1>
-    <em>Full stack developer</em>
+    <em class="homePageTitle">Full stack developer</em>
 </header>
 
 <footer class="container">
