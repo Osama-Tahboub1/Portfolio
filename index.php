@@ -21,7 +21,7 @@ require_once 'functions.php';
 <!--[if !IE]><body><![endif]-->
 
     <header class="container">
-        <nav>
+        <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="about.php">About</a></li>
@@ -29,7 +29,7 @@ require_once 'functions.php';
             </ul>
         </nav>
 
-        <div class="pageTitle homePageTitle">
+        <div class="pageTitle homePageTitle modal-title">
             <h1>Osama Tahboub</h1>
             <em>Full stack developer</em>
         </div>

@@ -25,7 +25,7 @@ $projectContent = getProjectContent($db);
 <body>
     <div>
         <header class="container">
-            <nav>
+            <nav class="nav">
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
@@ -33,7 +33,7 @@ $projectContent = getProjectContent($db);
                 </ul>
             </nav>
 
-            <div  class="pageTitle">
+            <div  class="pageTitle modal-title">
                 <h1>My Portfolio</h1>
             </div>
         </header>
@@ -44,7 +44,7 @@ $projectContent = getProjectContent($db);
             ?>
         </main>
 
-        <footer class="container">
+        <footer>
             <?php echo $footerContent = getFooterContent($db);?>
         </footer>
     </div>
