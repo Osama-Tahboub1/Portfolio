@@ -93,66 +93,77 @@ section article {
 main {
     position: absolute;
     top: 30%;
-    width: 70%;
+    width: 75%;
     margin: 0;
     overflow: auto;
     background-color: rgba(102, 102, 102, 0.9);
-    padding: 2em;
 }
 
 .col3 {
-    width: 33.3%;
-    height: 15rem;
+    width: 30%;
     float: left;
     overflow: hidden;
-    padding: 2rem;
+    padding: 0 2rem 0 2rem;
 }
 
 .col3 a {
     position: relative;
-    top: 0rem;
-    left: 0rem;
+    top: 0;
+    left: 0;
     color: #ffffff;
 }
 
 @media screen and (max-width: 1080px){
 
+    body {
+        background-color: rgba(102, 102, 102, 0.9);
+    }
+
     nav {
-        position:fixed;
-        top: 0px;
-        left: 0px;
-        padding: 1rem;
         font-size: 2rem;
+        height: 13%;
+        width:100%
+    }
+
+    nav ul li{
+        margin: 0 5px 0 5px;
     }
 
     .pageTitle h1,
     .pageTitle em {
-        /*display:none;*/
-    }
-
-    .pageTitle {
-        display: block;
-        font-size: 5rem;
-        padding: 3rem 3rem 1rem 3rem;
-    }
-
-    li {
-    padding: 0px 5px;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
     }
 
     section article {
-        padding: 1rem 1rem;
+        padding: 1rem ;
         width: 80%;
         font-size: 1rem;
     }
 
     main {
-        top: 20%;
+        top: 35%;
+        bottom: 0%;
         padding: 10px;
+        width: 100%;
     }
 
     .col3 {
         padding: 1rem;
+        height: 50%;
+
+    }
+
+    .footerIcons {
+        top: 0;
+        right: 0;
+        bottom: 100%;
+        padding: 1rem;
+        width: 20%;
+        background-color: rgba(102, 102, 102, 0);
+        z-index: 10;
+        height: 10%;
     }
 
 }
@@ -189,10 +200,6 @@ main {
         font-size: 1rem;
         padding: 3px;
 
-    }
-
-    .aboutMe {
-        position: absolute;
     }
 
     main,
