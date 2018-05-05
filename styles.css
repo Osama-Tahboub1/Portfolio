@@ -76,14 +76,6 @@ a:link {
     background-color: rgba(102, 102, 102, 0.9);
 }
 
-.adminLinkIcon {
-    padding: 15px;
-}
-
-.contactIconSmall {
-    display: none;
-}
-
 .aboutMe {
     position: absolute;
     top: 30%;
@@ -145,14 +137,6 @@ main {
     padding: 0px 5px;
     }
 
-    .browsingIcons {
-        display: block;
-        position: fixed;
-        top: 53%;
-        right: 5px;
-        background-color: transparent;
-    }
-
     section article {
         padding: 1rem 1rem;
         width: 80%;
@@ -185,23 +169,6 @@ main {
         display: block;
         font-size: 2rem;
     }
-
-    .browsingIcons {
-        display: none;
-    }
-
-    .contactIconSmall {
-        display: block;
-        position: fixed;
-        bottom: 15%;
-        right: 5px;
-    }
-
-    .contactIconSmall a {
-        position: absolute;
-        padding: 25px;
-    }
-
 
     section article {
         font-size: 10px;
