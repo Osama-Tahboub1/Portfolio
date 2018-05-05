@@ -15,7 +15,6 @@ $footerContent = getFooterContent($db);
     <meta charset="UTF-8">
     <title>About Page</title>
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
