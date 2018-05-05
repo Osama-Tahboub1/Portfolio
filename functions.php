@@ -30,7 +30,6 @@ function getFooterContent(PDO $db):string {
         $contactEmail = $footerContent['contactEmail'];
         $emailSubject = $footerContent['emailSubject'];
         $contactIcon = $footerContent['contactIcon'];
-        $smallContactIcon = $footerContent['smallContactIcon'];
         $githubLink = $footerContent['githubLink'];
         $githubIcon = $footerContent['githubIcon'];
 
