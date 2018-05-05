@@ -26,13 +26,14 @@ nav {
 }
 
 .pageTitle h1 {
-    position: relative;
+    position: absolute;
     top:60px;
     padding: 0 0 1rem 1rem;
     font-size: 3rem;
 }
 
 .homePageTitle h1{
+    position: relative;
     margin-bottom: 3rem;
 }
 
