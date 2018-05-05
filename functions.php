@@ -36,8 +36,8 @@ function getFooterContent(PDO $db):string {
     }
 
     $footer = "
-    <div class=\"browsingIcons\">
-        <a href=\"mailto:".$contactEmail."?Subject=".$emailSubject."\">
+    <div class=\"footerIcons\">
+    <a href=mailto:\"".$contactEmail."?Subject=".$emailSubject."\">
             <img src=\"".$contactIcon."\" alt=\"Email me icon\">
         </a>
         <a href=\"".$githubLink."\">
