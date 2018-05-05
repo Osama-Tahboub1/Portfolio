@@ -93,7 +93,9 @@ function getPortfolio ($projectContent)
             <h2><a href="<?php echo $arr['projectTitleLink']; ?>">
                     <?php echo $arr['projectTitle']; ?>
                 </a></h2>
+            <a href="<?php echo $arr['projectTitleLink']; ?>">
             <img src="<?php echo $arr['projectImage']; ?>">
+            </a>
         </div>
         <?php
     }
