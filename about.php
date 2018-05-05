@@ -14,8 +14,9 @@ $footerContent = getFooterContent($db);
 <head>
     <meta charset="UTF-8">
     <title>About Page</title>
-    <link type="text/css" rel="stylesheet" href="normalize.css">
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
 <!--[if lte IE 9]><body class="ieLegacy"><![endif]-->
