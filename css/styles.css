@@ -23,6 +23,7 @@ nav {
     right: 0;
     font-size: 3rem;
     background-color: rgba(102, 102, 102, 0.9);
+    z-index: 9;
 }
 
 .pageTitle h1 {
