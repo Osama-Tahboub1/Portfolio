@@ -32,7 +32,7 @@ $projectContent = getProjectContent($db);
                 </ul>
             </nav>
 
-            <div>
+            <div  class="pageTitle">
                 <h1>My Portfolio</h1>
             </div>
         </header>
