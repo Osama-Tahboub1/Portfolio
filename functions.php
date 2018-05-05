@@ -89,7 +89,7 @@ function getPortfolio ($projectContent)
 {
     foreach ($projectContent as $arr) {
         ?>
-        <div class="col3 col2Sm">
+        <div class="col3 col1Sm">
             <h2><a href="<?php echo $arr['projectTitleLink']; ?>">
                     <?php echo $arr['projectTitle']; ?>
                 </a></h2>

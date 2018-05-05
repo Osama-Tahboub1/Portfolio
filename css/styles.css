@@ -70,10 +70,10 @@ a:link {
     text-decoration: none;
 }
 
-.browsingIcons {
+.footerIcons {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1%;
+    right: 1%;
     padding: 1rem;
     background-color: rgba(102, 102, 102, 0.9);
 }
@@ -157,53 +157,74 @@ main {
 
 /*}*/
 
-/*@media screen and (max-width: 540px){*/
+@media screen and (max-width: 540px){
 
-    /*nav {*/
-        /*font-size: 1rem;*/
-        /*height: 4rem;*/
-    /*}*/
+    body {
+        background-color: rgba(102, 102, 102, 0.9);;
+    }
 
-    /*.pageTitle h1,*/
-    /*.pageTitle em {*/
-        /*font-size: 1rem;*/
-    /*}*/
+    nav {
+        font-size: 1rem;
+        height: 4rem;
+        width:100%
+    }
 
-    /*.pageTitle {*/
-        /*display: block;*/
-        /*font-size: 2rem;*/
-        /*padding: 1rem;*/
-    /*}*/
+    .pageTitle h1,
+    .pageTitle em {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 
-    /*section article {*/
-        /*font-size: 10px;*/
-        /*padding: 3px;*/
+    .pageTitle {
+        display: block;
+        font-size: 4rem;
+        padding: 1rem;
+    }
 
-    /*}*/
+    section article {
+        font-size: 1rem;
+        padding: 3px;
 
-    /*.aboutMe {*/
-        /*position: absolute;*/
-        /*top: 10%;*/
-    /*}*/
+    }
 
-    /*main {*/
-        /*top: 15%;*/
-    /*}*/
+    .aboutMe {
+        position: absolute;
+    }
 
-    /*.col2Sm img {*/
-        /*display: none;*/
-    /*}*/
+    main,
+    section article {
+        top: 25%;
+        width: 100%;
+    }
 
-    /*.col2Sm h2 {*/
-        /*font-size: 1rem;*/
-    /*}*/
+    .col1Sm img {
+        display: none;
+    }
 
-    /*.col2Sm {*/
-        /*padding: 0rem 1rem;*/
-        /*height: 5rem*/
-    /*}*/
+    .col1Sm h2 {
+        font-size: 1rem;
+    }
 
-/*}*/
+    .col1Sm {
+        padding: 0rem 1rem;
+        height: 10%;
+        width: 75%;
+    }
+
+    .footerIcons {
+        top: 10%;
+        right: 5%;
+        bottom: 90%;
+        padding: 1rem;
+        width: 5%;
+        background-color: rgba(102, 102, 102, 0);
+    }
+
+    .footerIcons img {
+        height: 2rem;
+    }
+
+}
 
 
 
