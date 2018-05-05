@@ -23,7 +23,7 @@ $footerContent = getFooterContent($db);
 
 <body>
     <header class="container">
-        <nav class="nav">
+        <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -31,7 +31,7 @@ $footerContent = getFooterContent($db);
             </ul>
         </nav>
 
-        <div class="pageTitle modal-title">
+        <div class="pageTitle">
             <h1>About Me</h1>
         </div>
     </header>

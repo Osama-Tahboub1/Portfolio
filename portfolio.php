@@ -24,7 +24,7 @@ $projectContent = getProjectContent($db);
 <body>
     <div>
         <header class="container">
-            <nav class="nav">
+            <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
@@ -32,7 +32,7 @@ $projectContent = getProjectContent($db);
                 </ul>
             </nav>
 
-            <div  class="pageTitle modal-title">
+            <div  class="pageTitle">
                 <h1>My Portfolio</h1>
             </div>
         </header>
