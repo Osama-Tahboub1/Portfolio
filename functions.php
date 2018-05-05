@@ -69,9 +69,9 @@ function getProjectContent(PDO $db):array {
  *
  * @param $array array associative array.
  *
- * @return string the text content of an array.
+ * @return string the string value of the array.
  */
-function insertParagraph(array $array):string {
+function getParagraph(array $array):string {
     $paragraph = '';
     foreach ($array as $value) {
         $paragraph .= '<p>'.$value['aboutMeArticle'].'</p>';
