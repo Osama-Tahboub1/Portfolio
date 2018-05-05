@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background: url("assets/background1.jpeg");
+    background: url("../assets/background1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: serif;
