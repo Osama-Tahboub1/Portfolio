@@ -27,21 +27,21 @@ nav {
 }
 
 .pageTitle h1 {
-    /*position: relative;*/
-    /*left: 0;*/
-    /*padding: 0 0 0 1rem;*/
-    font-size: 5rem;
+    position: relative;
+    top: 60px;
+    padding: 0 0 1rem 1rem;
+    font-size: 3rem;
 }
 
 .homePageTitle h1{
-    top: 60px;
-    /*margin-bottom: 3rem;*/
+
+    margin-bottom: 3rem;
 }
 
 .homePageTitle em {
     position: relative;
     padding: 0 0 0 1rem;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 li {
