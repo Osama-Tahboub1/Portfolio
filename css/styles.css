@@ -23,18 +23,16 @@ nav {
     right: 0;
     font-size: 3rem;
     background-color: rgba(102, 102, 102, 0.9);
-    z-index: 9;
 }
 
 .pageTitle h1 {
     position: relative;
-    top: 60px;
+    top:60px;
     padding: 0 0 1rem 1rem;
     font-size: 3rem;
 }
 
 .homePageTitle h1{
-
     margin-bottom: 3rem;
 }
 
@@ -53,6 +51,7 @@ li {
 
 a {
     color: #ffffff;
+    z-index: 9;
 }
 
 a:visited {
@@ -93,7 +92,7 @@ main {
     position: absolute;
     top: 30%;
     width: 70%;
-    margin: 0 auto;
+    margin: 0;
     overflow: auto;
     background-color: rgba(102, 102, 102, 0.9);
     padding: 2em;
