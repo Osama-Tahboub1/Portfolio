@@ -23,6 +23,7 @@ nav {
     right: 0;
     font-size: 3rem;
     background-color: rgba(102, 102, 102, 0.9);
+    z-index: 9;
 }
 
 .pageTitle h1 {
@@ -34,12 +35,12 @@ nav {
 
 .homePageTitle h1{
     top: 60px;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
 }
 
-homePageTitle em {
+.homePageTitle em {
     position: relative;
-    padding: 1rem 0 0 1rem;
+    padding: 0 0 0 1rem;
     font-size: 3rem;
 }
 
@@ -125,7 +126,7 @@ main {
 
     .pageTitle h1,
     .pageTitle em {
-        display:none;
+        /*display:none;*/
     }
 
     .pageTitle {
@@ -164,7 +165,7 @@ main {
 
     .pageTitle h1,
     .pageTitle em {
-        display:none;
+        font-size: 1rem;
     }
 
     .pageTitle {
