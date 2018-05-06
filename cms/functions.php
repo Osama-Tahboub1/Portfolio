@@ -162,8 +162,6 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
  *
  * @return bool returns true if both content types are string.
  */
-
-
 function loggedInStatus():bool {
     session_start();
 
@@ -174,4 +172,14 @@ function loggedInStatus():bool {
     } else {
         return true;
     }
+}
+
+
+/*
+ * Signs out of session
+ *
+ * @return bool returns value of session status.
+ */
+function signOut():bool {
+    return $_SESSION['loggedIn'] = false;
 }
