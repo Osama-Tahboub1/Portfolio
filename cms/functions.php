@@ -174,7 +174,7 @@ function loggedInStatus():bool {
     }
 }
 
-function getSignOutButton() {
+function getSignOutButton():string {
     $signOutButton = "
             <form method=\"post\" action=\"about.php\">
                 <span>Sign Out</span>
