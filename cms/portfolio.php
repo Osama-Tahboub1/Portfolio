@@ -55,10 +55,6 @@ require_once 'functions.php';
                         <input type="submit" value="Update">
                     </form>
                 </div>
-
-                <div>
-                    <?php echo getSignOutButton(); ?>
-                </div>
             </body>
             </html>
 

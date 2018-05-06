@@ -44,10 +44,6 @@ try {
                 <input type="submit" value="Update">
             </form>
         </div>
-
-        <div>
-            <?php echo getSignOutButton(); ?>
-        </div>
         </body>
         </html>
 

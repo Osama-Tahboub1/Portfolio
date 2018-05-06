@@ -23,10 +23,6 @@ try {
                 <li><a href="about.php">About Me</a></li>
             </ul>
         </nav>
-
-        <div>
-            <?php echo getSignOutButton(); ?>
-        </div>
         </body>
         </html>
 
