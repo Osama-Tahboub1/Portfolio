@@ -174,6 +174,16 @@ function loggedInStatus():bool {
     }
 }
 
+function getSignOutButton() {
+    $signOutButton = "
+            <form method=\"post\" action=\"about.php\">
+                <span>Sign Out</span>
+                <input type=\"submit\" value=\"Update\">
+            </form>
+    ";
+    return $signOutButton;
+
+}
 
 /*
  * Signs out of session
