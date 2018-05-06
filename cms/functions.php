@@ -191,8 +191,8 @@ function getSignOutButton():string {
 /*
  * Signs out of session.
  *
- * @return bool returns value of session status.
  */
-function signOut():bool {
-    return $_SESSION['loggedIn'] = false;
+function signOut() {
+    session_start();
+    session_destroy();
 }
