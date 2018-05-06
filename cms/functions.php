@@ -174,6 +174,11 @@ function loggedInStatus():bool {
     }
 }
 
+/*
+ * Adds a sign out button to pages.
+ *
+ * @return string returns a form that contains a button.
+ */
 function getSignOutButton():string {
     $signOutButton = "
             <form method=\"post\" action=\"about.php\">
@@ -184,7 +189,7 @@ function getSignOutButton():string {
 }
 
 /*
- * Signs out of session
+ * Signs out of session.
  *
  * @return bool returns value of session status.
  */
