@@ -182,7 +182,7 @@ function loggedInStatus():bool {
 function getSignOutButton():string {
     $signOutButton = "
             <form method=\"post\" action=\"about.php\">
-                <input type=\"submit\" value=\"Sign Out\">
+                <button type=\"submit\" name=\"signOutButton\" value=\"Sign Out\">
             </form>
     ";
     return $signOutButton;
