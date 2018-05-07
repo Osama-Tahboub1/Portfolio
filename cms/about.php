@@ -16,8 +16,6 @@ try {
 
         if (isset($_POST['updateParagraph']) && $paragraph !== NULL && $paragraphId !== NULL) {
             updateParagraph($db, $paragraph, $paragraphId);
-        } else {
-            echo"all fields must be full to add a paragraph";
         }
 
         ?>

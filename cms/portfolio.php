@@ -20,8 +20,6 @@ require_once 'functions.php';
 
             if (isset($_POST['updatePortfolio']) && $projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL && $projectId!= NULL) {
                 updateProject($db, $projectTitle, $projectTitleLink, $projectImage, $projectId);
-            } else {
-                echo "all fields must be full to add a project";
             }
 
             ?>
