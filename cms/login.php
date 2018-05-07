@@ -16,7 +16,7 @@ $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
 
-if ($inputUserName != NULL && $inputPassword != NULL) {
+if (isset($_POST['login']) && $inputUserName != NULL && $inputPassword != NULL) {
     checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
 } else {
     echo 'Please enter user name and password';
@@ -34,7 +34,7 @@ if ($inputUserName != NULL && $inputPassword != NULL) {
     <form method="post" action="login.php">
         <input type="name" name="userName">
         <input type="name" name="password">
-        <input type="submit">
+        <input type="submit" name="login">
     </form>
 </body>
 </html>
