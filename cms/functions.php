@@ -142,7 +142,7 @@ function getUserCredentials(PDO $db):array {
  *
  * @return bool returns true if credentials are matched.
  */
-function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
+function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword):bool {
 
     if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
         session_start();
