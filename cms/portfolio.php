@@ -18,7 +18,7 @@ require_once 'functions.php';
             $projectImage = $_POST['projectImage'];
             $projectId = $_POST['projectId'];
 
-            if ($projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL && $projectId!= NULL) {
+            if (isset($_POST['updatePortfolio']) && $projectTitle != NULL && $projectTitleLink != NULL && $projectImage != NULL && $projectId!= NULL) {
                 updateProject($db, $projectTitle, $projectTitleLink, $projectImage, $projectId);
             } else {
                 echo "all fields must be full to add a project";
@@ -52,7 +52,7 @@ require_once 'functions.php';
                         <p>Project Image</p>
                         <textarea name="projectImage" cols="100" rows="5" maxlength="500"></textarea>
                         <p></p>
-                        <input type="submit" value="Update">
+                        <input type="submit" name="updatePortfolio" value="Update">
                     </form>
                 </div>
 
