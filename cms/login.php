@@ -14,6 +14,7 @@ foreach ($credentialsArray as $credentials) {
 
 $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
+$hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
 
 if ($inputUserName != NULL && $inputPassword != NULL) {
     checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);

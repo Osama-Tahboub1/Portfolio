@@ -14,7 +14,7 @@ try {
         $paragraph = $_POST['paragraph'];
         $paragraphId = $_POST['paragraphId'];
 
-        if ($paragraph != NULL && $paragraphId!= NULL) {
+        if (isset($_POST['updateParagraph']) && $paragraph !== NULL && $paragraphId !== NULL) {
             updateParagraph($db, $paragraph, $paragraphId);
         } else {
             echo"all fields must be full to add a paragraph";
@@ -41,7 +41,7 @@ try {
                 <p>Paragraph</p>
                 <textarea name="paragraph" cols="100" rows="5" maxlength="500"></textarea>
                 <p></p>
-                <input type="submit" value="Update">
+                <input type="submit" name="updateParagraph" value="update">
             </form>
         </div>
 
