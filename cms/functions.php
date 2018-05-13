@@ -215,3 +215,19 @@ function signOut() {
         header("Location: login.php");
     }
 }
+
+/*
+ * Updates user credentials.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $actualUserName string value updated through query.
+ * @param $hashedPassword int secure value updated through query.
+ */
+function updateCredentials (PDO $db, string $actualUserName, string $hashedPassword) {
+
+    $query = $db->prepare("UPDATE `users` SET `name` = :actualUserName, `password` = :hashedPassword;");
+    $query->bindParam(':actualUserName', $actualUserName);
+    $query->bindParam(':hashedPassword', $hashedPassword);
+    $query->execute();
+}
+
