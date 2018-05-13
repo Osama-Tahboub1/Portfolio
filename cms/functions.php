@@ -189,8 +189,8 @@ function getFooter(PDO $db):string {
     $footerLinks = $footerLinksQuery->fetchAll();
 
     foreach ($footerLinks as $link) {
-        $emailLink .= $link['contactEmail'];
-        $githubLink .= $link['githubLink'];
+        $emailLink = $link['contactEmail'];
+        $githubLink = $link['githubLink'];
     }
 
     $footer = "
