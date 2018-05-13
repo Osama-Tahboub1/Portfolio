@@ -136,25 +136,39 @@ function getUserCredentials(PDO $db):array {
  * Checks login details are validated and match saved credentials.
  *
  * @param $actualUserName string username stored credential.
- * @param $actualPassword string password stored credential.
+ * @param $hashedPassword string password stored credential.
  * @param $inputUserName string form inout username.
  * @param $inputPassword string form input password.
  *
  * @return bool returns true if credentials are matched.
  */
-function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword):bool {
+function checkCredentials(string $actualUserName, string $hashedPassword, string $inputUserName, string $inputPassword):bool {
 
-    if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
+    if (($inputUserName === $actualUserName) && (password_verify($inputPassword, $hashedPassword) === true)) {
+        return true;
+    } else {
+
+        return false;
+    }
+}
+
+/*
+ * Logs user in if they enter right credentials.
+ *
+ * @param $checkCredentials bool passed in whether user loged in with right credentials or not.
+ *
+ */
+function login ($checkCredentials) {
+    if (($checkCredentials === true)) {
         session_start();
         $_SESSION['loggedIn'] = true;
         header('Location: admin.php');
-        return true;
     } else {
         session_start();
         $_SESSION['loggedIn'] = false;
         echo 'Please enter user name and password';
-        return false;
     }
+
 }
 
 /*
