@@ -7,13 +7,13 @@ require_once 'functions.php';
 $emailLink = $_POST['emailLink'];
 $githubLink = $_POST['githubLink'];
 
-if ($emailLink != NULL) {
+if (isset($_POST['emailLink']) && $emailLink != NULL) {
     updateContactEmail($db, $emailLink);
 } else {
     echo"field must not be empty to add a paragraph";
 }
 
-if ($githubLink != NULL) {
+if (isset($_POST['emailLink']) && $githubLink != NULL) {
     updategithubLink($db, $$githubLink);
 } else {
     echo"field must not be empty to add a paragraph";
