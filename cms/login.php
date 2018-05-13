@@ -12,9 +12,8 @@ foreach ($credentialsArray as $credentials) {
     $hashedPassword = $credentials['password'];
 }
 
-$inputUserName = $_POST['userName'];
-$inputPassword = $_POST['password'];
-$hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
+$inputUserName = filter_var($_POST['userName'],FILTER_SANITIZE_STRING);
+$inputPassword = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 
 if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inputPassword !== empty($inputPassword))) {
     $checkCredentials = checkCredentials($actualUserName, $hashedPassword, $inputUserName, $inputPassword);
