@@ -176,6 +176,13 @@ function loggedInStatus():bool {
     }
 }
 
+/*
+ * Returns footer from array content.
+ *
+ * @param $db PDO object connection to the database.
+ *
+ * @return string the content of the arrays within the arrays.
+ */
 function getFooter(PDO $db):string {
     $footerLinksQuery = $db->prepare("SELECT `contactEmail`, `githubLink` FROM `footer`;");
     $footerLinksQuery->execute();
@@ -195,4 +202,30 @@ function getFooter(PDO $db):string {
         </div>
     ";
     return $footer;
+}
+
+/*
+ * Updates the contactEmail value of a row in footer table.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $contactEmail string used with post from form and passed in to update contactEmail.
+ *
+ */
+function updateContactEmail(PDO $db, string $contactEmail) {
+    $query = $db->prepare("UPDATE `footer` SET `contactEmail` = :contactEmail WHERE `id` = 1;");
+    $query->bindParam(':contactEmail', $contactEmail);
+    $query->execute();
+}
+
+/*
+ * Updates the githubLink value of a row in footer table.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $githubLink string used with post from form and passed in to update githubLink.
+ *
+ */
+function updateGithubLink(PDO $db, string $githubLink) {
+    $query = $db->prepare("UPDATE `footer` SET `githubLink` = :githubLink WHERE `id` = 1;");
+    $query->bindParam(':githubLink', $githubLink);
+    $query->execute();
 }
