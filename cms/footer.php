@@ -4,6 +4,21 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
 
+$emailLink = $_POST['emailLink'];
+$githubLink = $_POST['githubLink'];
+
+if ($emailLink != NULL) {
+    updateContactEmail($db, $emailLink);
+} else {
+    echo"field must not be empty to add a paragraph";
+}
+
+if ($githubLink != NULL) {
+    updategithubLink($db, $$githubLink);
+} else {
+    echo"field must not be empty to add a paragraph";
+}
+
 ?>
 
 <!DOCTYPE html>
