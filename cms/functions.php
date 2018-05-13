@@ -175,3 +175,24 @@ function loggedInStatus():bool {
         return true;
     }
 }
+
+function getFooter(PDO $db):string {
+    $footerLinksQuery = $db->prepare("SELECT `contactEmail`, `githubLink` FROM `footer`;");
+    $footerLinksQuery->execute();
+    $footerLinks = $footerLinksQuery->fetchAll();
+
+    foreach ($footerLinks as $link) {
+        $emailLink .= $link['contactEmail'];
+        $githubLink .= $link['githubLink'];
+    }
+
+    $footer = "
+    <h1>Footer Links</h1>
+        <div>
+            <textarea name=\"emailLink\" cols=\"50\" rows=\"2\" maxlength=\"50\">".$emailLink."</textarea>
+            <p></p>
+            <textarea name=\"emailLink\" cols=\"50\" rows=\"2\" maxlength=\"50\">".$githubLink."</textarea>
+        </div>
+    ";
+    return $footer;
+}

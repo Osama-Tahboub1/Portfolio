@@ -14,7 +14,7 @@ require_once 'functions.php';
 </head>
 <body>
 <div>
-
+    <?php echo getFooter($db);?>
 </div>
 
 
