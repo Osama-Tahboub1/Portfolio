@@ -238,7 +238,7 @@ function updateCredentials (PDO $db, string $actualUserName, string $hashedPassw
  *
  * @return string the content of the arrays within the arrays.
  */
-function getFooter(PDO $db):string {
+function getFooterLinks(PDO $db):string {
     $footerLinksQuery = $db->prepare("SELECT `contactEmail`, `githubLink` FROM `footer`;");
     $footerLinksQuery->execute();
     $footerLinks = $footerLinksQuery->fetchAll();
