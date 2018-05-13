@@ -168,7 +168,15 @@ main {
 
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 990px){
+    .footerIcons {
+        padding: 5px;
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 570px){
 
     body {
         background-color: rgba(102, 102, 102, 0.9);;
@@ -186,7 +194,7 @@ main {
 
     .pageTitle h1,
     .pageTitle em {
-        font-size: 2rem;
+        font-size: 25px;
         margin-bottom: 1rem;
     }
 
@@ -197,7 +205,7 @@ main {
     }
 
     section article {
-        font-size: 1rem;
+        font-size: 12px;
         padding: 3px;
 
     }
