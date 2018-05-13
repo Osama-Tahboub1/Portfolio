@@ -16,6 +16,7 @@ loggedInStatus();
         <ul>
             <li><a href="portfolio.php">Portfolio</a></li>
             <li><a href="about.php">About Me</a></li>
+            <li><a href="footer.php">Footer</a></li>
         </ul>
     </nav>
 </body>
