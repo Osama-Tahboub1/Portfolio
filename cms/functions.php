@@ -231,3 +231,57 @@ function updateCredentials (PDO $db, string $actualUserName, string $hashedPassw
     $query->execute();
 }
 
+/*
+ * Returns footer from array content.
+ *
+ * @param $db PDO object connection to the database.
+ *
+ * @return string the content of the arrays within the arrays.
+ */
+function getFooter(PDO $db):string {
+    $footerLinksQuery = $db->prepare("SELECT `contactEmail`, `githubLink` FROM `footer`;");
+    $footerLinksQuery->execute();
+    $footerLinks = $footerLinksQuery->fetchAll();
+
+    foreach ($footerLinks as $link) {
+        $emailLink = $link['contactEmail'];
+        $githubLink = $link['githubLink'];
+    }
+
+    $footer = "
+    <h1>Footer Links</h1>
+        <div>
+            <textarea name=\"emailLink\" cols=\"50\" rows=\"2\" maxlength=\"50\">".$emailLink."</textarea>
+            <p></p>
+            <textarea name=\"emailLink\" cols=\"50\" rows=\"2\" maxlength=\"50\">".$githubLink."</textarea>
+        </div>
+    ";
+    return $footer;
+}
+
+/*
+ * Updates the contactEmail value of a row in footer table.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $contactEmail string used with post from form and passed in to update contactEmail.
+ *
+ */
+function updateContactEmail(PDO $db, string $contactEmail) {
+    $query = $db->prepare("UPDATE `footer` SET `contactEmail` = :contactEmail WHERE `id` = 1;");
+    $query->bindParam(':contactEmail', $contactEmail);
+    $query->execute();
+}
+
+/*
+ * Updates the githubLink value of a row in footer table.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $githubLink string used with post from form and passed in to update githubLink.
+ *
+ */
+function updateGithubLink(PDO $db, string $githubLink) {
+    $query = $db->prepare("UPDATE `footer` SET `githubLink` = :githubLink WHERE `id` = 1;");
+    $query->bindParam(':githubLink', $githubLink);
+    $query->execute();
+}
+
