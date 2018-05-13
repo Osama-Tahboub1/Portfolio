@@ -16,7 +16,7 @@ $inputUserName = $_POST['userName'];
 $inputPassword = $_POST['password'];
 $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
 
-if (isset($_POST['login']) && $inputUserName != NULL && $inputPassword != NULL) {
+if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inputPassword !== empty($inputPassword))) {
     checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
 } else {
     echo 'Please enter user name and password';
