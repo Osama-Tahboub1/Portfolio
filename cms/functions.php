@@ -193,6 +193,8 @@ function getSignOutButton():string {
  *
  */
 function signOut() {
-    session_start();
-    session_destroy();
+    if (isset($_POST['signOutButton'])) {
+        session_start();
+        session_destroy();
+    }
 }
