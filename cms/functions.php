@@ -127,7 +127,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
  * @return array returns associative array with arrays credentials from users and passwords tables.
  */
 function getUserCredentials(PDO $db):array {
-    $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`;");
+    $userCredentialsQuery = $db->prepare("SELECT `name`, `password` FROM `users`;");
     $userCredentialsQuery->execute();
     return $userCredentialsQuery->fetchAll();
 }
