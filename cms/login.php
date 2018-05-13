@@ -9,7 +9,7 @@ $credentialsArray = getUserCredentials($db);
 
 foreach ($credentialsArray as $credentials) {
     $actualUserName = $credentials['name'];
-    $actualPassword = $credentials['password'];
+    $hashedPassword = $credentials['password'];
 }
 
 $inputUserName = $_POST['userName'];
@@ -17,7 +17,8 @@ $inputPassword = $_POST['password'];
 $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
 
 if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inputPassword !== empty($inputPassword))) {
-    checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
+    $checkCredentials = checkCredentials($actualUserName, $hashedPassword, $inputUserName, $inputPassword);
+    login($checkCredentials);
 } else {
     echo 'Please enter user name and password';
 }
