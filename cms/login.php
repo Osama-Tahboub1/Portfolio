@@ -7,9 +7,12 @@ require_once 'functions.php';
 
 $credentialsArray = getUserCredentials($db);
 
-foreach ($credentialsArray as $credentials) {
-    $actualUserName = $credentials['name'];
-    $hashedPassword = $credentials['password'];
+if (is_array($credentialsArray) === true) {
+    foreach ($credentialsArray as $credentials) {
+        $actualUserName = $credentials['name'];
+        $hashedPassword = $credentials['password'];
+    }
+
 }
 
 $inputUserName = filter_var($_POST['userName'],FILTER_SANITIZE_STRING);
