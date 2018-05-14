@@ -206,7 +206,7 @@ function getSignOutButton():string {
  * Signs out of session.
  *
  */
-function signOut() {
+function signOut():void{
     if (isset($_POST['signOutButton'])) {
         session_start();
         session_destroy();
