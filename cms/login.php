@@ -13,6 +13,8 @@ if (is_array($credentialsArray) === true) {
         $hashedPassword = $credentials['password'];
     }
 
+} else {
+    echo "Application error, contact admin";
 }
 
 $inputUserName = filter_var($_POST['userName'],FILTER_SANITIZE_STRING);
