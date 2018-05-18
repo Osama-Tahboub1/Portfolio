@@ -127,7 +127,7 @@ function updateProject(PDO $db, string $projectTitle, string $projectTitleLink, 
  * @return array returns associative array with arrays credentials from users and passwords tables.
  */
 function getUserCredentials(PDO $db):array {
-    $userCredentialsQuery = $db->prepare("SELECT `users`.`name`, `password` FROM `users` LEFT JOIN `passwords` ON `users`.`id` = `passwords`.`userId`;");
+    $userCredentialsQuery = $db->prepare("SELECT `name`, `password` FROM `users`;");
     $userCredentialsQuery->execute();
     return $userCredentialsQuery->fetchAll();
 }
@@ -136,25 +136,39 @@ function getUserCredentials(PDO $db):array {
  * Checks login details are validated and match saved credentials.
  *
  * @param $actualUserName string username stored credential.
- * @param $actualPassword string password stored credential.
+ * @param $hashedPassword string password stored credential.
  * @param $inputUserName string form inout username.
  * @param $inputPassword string form input password.
  *
  * @return bool returns true if credentials are matched.
  */
-function checkCredentials(string $actualUserName, string $actualPassword, string $inputUserName, string $inputPassword): bool {
+function checkCredentials(string $actualUserName, string $hashedPassword, string $inputUserName, string $inputPassword):bool {
 
-    if (($inputUserName === $actualUserName) && ($inputPassword === $actualPassword)) {
+    if (($inputUserName === $actualUserName) && (password_verify($inputPassword, $hashedPassword) === true)) {
+        return true;
+    } else {
+
+        return false;
+    }
+}
+
+/*
+ * Logs user in if they enter right credentials.
+ *
+ * @param $checkCredentials bool passed in whether user loged in with right credentials or not.
+ *
+ */
+function login ($checkCredentials) {
+    if (($checkCredentials === true)) {
         session_start();
         $_SESSION['loggedIn'] = true;
         header('Location: admin.php');
-        return true;
     } else {
         session_start();
         $_SESSION['loggedIn'] = false;
         echo 'Please enter user name and password';
-        return false;
     }
+
 }
 
 /*
@@ -162,8 +176,6 @@ function checkCredentials(string $actualUserName, string $actualPassword, string
  *
  * @return bool returns true if both content types are string.
  */
-
-
 function loggedInStatus():bool {
     session_start();
 
@@ -177,13 +189,56 @@ function loggedInStatus():bool {
 }
 
 /*
+ * Adds a sign out button to pages.
+ *
+ * @return string returns a form that contains a button.
+ */
+function getSignOutButton():string {
+    $signOutButton = "
+            <form method=\"post\" action=\"signOut.php\">
+                <input type=\"submit\" name=\"signOutButton\" value=\"Sign Out\">
+            </form>
+    ";
+    return $signOutButton;
+}
+
+/*
+ * Signs out of session.
+ *
+ */
+function signOut():void{
+    if (isset($_POST['signOutButton'])) {
+        session_start();
+        session_destroy();
+        header("Location: login.php");
+    } else {
+        header("Location: login.php");
+    }
+}
+
+/*
+ * Updates user credentials.
+ *
+ * @param $db PDO object connection to the database.
+ * @param $actualUserName string value updated through query.
+ * @param $hashedPassword int secure value updated through query.
+ */
+function updateCredentials (PDO $db, string $actualUserName, string $hashedPassword) {
+
+    $query = $db->prepare("UPDATE `users` SET `name` = :actualUserName, `password` = :hashedPassword;");
+    $query->bindParam(':actualUserName', $actualUserName);
+    $query->bindParam(':hashedPassword', $hashedPassword);
+    $query->execute();
+}
+
+/*
  * Returns footer from array content.
  *
  * @param $db PDO object connection to the database.
  *
  * @return string the content of the arrays within the arrays.
  */
-function getFooter(PDO $db):string {
+function getFooterLinks(PDO $db):string {
     $footerLinksQuery = $db->prepare("SELECT `contactEmail`, `githubLink` FROM `footer`;");
     $footerLinksQuery->execute();
     $footerLinks = $footerLinksQuery->fetchAll();
@@ -229,3 +284,4 @@ function updateGithubLink(PDO $db, string $githubLink) {
     $query->bindParam(':githubLink', $githubLink);
     $query->execute();
 }
+

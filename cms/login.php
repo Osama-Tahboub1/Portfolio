@@ -7,18 +7,22 @@ require_once 'functions.php';
 
 $credentialsArray = getUserCredentials($db);
 
-foreach ($credentialsArray as $credentials) {
-    $actualUserName = $credentials['name'];
-    $actualPassword = $credentials['password'];
+if (is_array($credentialsArray) === true) {
+    foreach ($credentialsArray as $credentials) {
+        $actualUserName = $credentials['name'];
+        $hashedPassword = $credentials['password'];
+    }
+
+} else {
+    echo "Application error, contact admin";
 }
 
-$inputUserName = $_POST['userName'];
-$inputPassword = $_POST['password'];
+$inputUserName = filter_var($_POST['userName'],FILTER_SANITIZE_STRING);
+$inputPassword = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 
-if ($inputUserName != NULL && $inputPassword != NULL) {
-    checkCredentials($actualUserName, $actualPassword, $inputUserName, $inputPassword);
-} else {
-    echo 'Please enter user name and password';
+if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inputPassword !== empty($inputPassword))) {
+    $checkCredentials = checkCredentials($actualUserName, $hashedPassword, $inputUserName, $inputPassword);
+    login($checkCredentials);
 }
 
 ?>
@@ -30,10 +34,13 @@ if ($inputUserName != NULL && $inputPassword != NULL) {
     <title>Login Page</title>
 </head>
 <body>
+    <h1>Portfolio CMS</h1>
     <form method="post" action="login.php">
         <input type="name" name="userName">
+        <p></p>
         <input type="name" name="password">
-        <input type="submit">
+        <p></p>
+        <input type="submit" name="login" value="login">
     </form>
 </body>
 </html>
