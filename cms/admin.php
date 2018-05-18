@@ -2,10 +2,9 @@
 
 require_once 'functions.php';
 
-try {
     $loggedInStatus = loggedInStatus();
     if ($loggedInStatus !== true) {
-        throw new Exception("Please login");
+        echo "Please login";
     } else {
 
         ?>
@@ -32,12 +31,6 @@ try {
         </html>
 
         <?php
-
     }
-
-    } catch (Exception $e) {
-        echo 'Exception:', $e->getMessage();
-    }
-
 ?>
 

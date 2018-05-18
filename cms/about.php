@@ -5,10 +5,9 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
 
-try {
     $loggedInStatus = loggedInStatus();
     if ($loggedInStatus !== true) {
-        throw new Exception("Please login");
+        echo"Please login";
     } else {
 
         $paragraph = $_POST['paragraph'];
@@ -50,13 +49,7 @@ try {
         </html>
 
         <?php
-
     }
-
-    } catch (Exception $e) {
-        echo 'Exception:', $e->getMessage();
-    }
-
 ?>
 
 
