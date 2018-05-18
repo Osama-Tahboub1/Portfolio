@@ -23,8 +23,6 @@ $inputPassword = filter_var($_POST['password'],FILTER_SANITIZE_STRING);
 if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inputPassword !== empty($inputPassword))) {
     $checkCredentials = checkCredentials($actualUserName, $hashedPassword, $inputUserName, $inputPassword);
     login($checkCredentials);
-} else {
-    echo 'Please enter user name and password';
 }
 
 ?>
@@ -36,10 +34,13 @@ if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inpu
     <title>Login Page</title>
 </head>
 <body>
+    <h1>Portfolio CMS</h1>
     <form method="post" action="login.php">
         <input type="name" name="userName">
+        <p></p>
         <input type="name" name="password">
-        <input type="submit" name="login">
+        <p></p>
+        <input type="submit" name="login" value="login">
     </form>
 </body>
 </html>
