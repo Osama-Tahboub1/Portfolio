@@ -4,7 +4,7 @@ require_once 'functions.php';
 
     $loggedInStatus = loggedInStatus();
     if ($loggedInStatus !== true) {
-        echo "Please login";
+        header("Location: login.php");
     } else {
 
         ?>
