@@ -113,6 +113,10 @@ main {
     color: #ffffff;
 }
 
+.portfolio a:hover {
+    border-bottom: none;
+}
+
 @media screen and (max-width: 1080px){
 
     body {

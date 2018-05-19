@@ -57,7 +57,7 @@ function getFooterContent(PDO $db):string {
  * @return array returns associative array with arrays containing content from portfolio table.
  */
 function getProjectContent(PDO $db):array {
-    $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`  FROM `portfolio` WHERE `projectTitle` IS NOT NULL;");
+    $projectContentQuery = $db->prepare("SELECT `projectTitle` ,`projectTitleLink`, `projectImage`,`githubLink`, `githubIcon`  FROM `portfolio` WHERE `projectTitle` IS NOT NULL;");
     $projectContentQuery->execute();
     $projectContent = $projectContentQuery->fetchAll();
     return $projectContent;
@@ -89,10 +89,16 @@ function getPortfolio ($projectContent)
 {
     foreach ($projectContent as $arr) {
         ?>
-        <div class="col3 col1Sm">
-            <h2><a href="<?php echo $arr['projectTitleLink']; ?>">
+        <div class="col3 col1Sm portfolio">
+            <h2>
+                <a href="<?php echo $arr['githubLink']; ?>">
+                    <img src="<?php echo $arr['githubIcon']; ?>">
+                </a>
+
+                <a href="<?php echo $arr['projectTitleLink']; ?>">
                     <?php echo $arr['projectTitle']; ?>
-                </a></h2>
+                </a>
+            </h2>
             <a href="<?php echo $arr['projectTitleLink']; ?>">
             <img src="<?php echo $arr['projectImage']; ?>">
             </a>

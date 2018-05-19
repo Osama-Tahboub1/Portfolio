@@ -1,6 +1,6 @@
 <?php
 
-$db = new PDO('mysql:host=127.0.0.1; dbname=osamasCMSDB', 'root');
+$db = new PDO('mysql:host=127.0.0.1; dbname=osama_CMS', 'root', 'Zendor1983');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
@@ -12,7 +12,7 @@ require_once 'functions.php';
 <meta charset="UTF-8">
 <head>
     <title>Osama's Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="cssnormalize.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
