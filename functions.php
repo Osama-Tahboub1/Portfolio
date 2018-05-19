@@ -89,7 +89,7 @@ function getPortfolio ($projectContent)
 {
     foreach ($projectContent as $arr) {
         ?>
-        <div class="col3 col1Sm">
+        <div class="col3 col1Sm portfolio">
             <h2>
                 <a href="<?php echo $arr['githubLink']; ?>">
                     <img src="<?php echo $arr['githubIcon']; ?>">
