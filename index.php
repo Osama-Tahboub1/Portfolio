@@ -12,7 +12,7 @@ require_once 'functions.php';
 <meta charset="UTF-8">
 <head>
     <title>Osama's Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="cssnormalize.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
