@@ -17,8 +17,7 @@ require_once 'functions.php';
 </head>
 
 <!--[if gte IE 8]><body class="ieLegacy"><![endif]-->
-<!--[if !IE]><body><![endif]-->
-
+<body>
     <header class="container">
         <nav>
             <ul>
