@@ -91,7 +91,7 @@ function getPortfolio ($projectContent)
         ?>
         <div class="col3 col1Sm">
             <h2>
-                <a href="#">
+                <a href="<?php echo $arr['githubLink']; ?>">
                     <img src="<?php echo $arr['githubIcon']; ?>">
                 </a>
 
