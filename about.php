@@ -19,7 +19,7 @@ $footerContent = getFooterContent($db);
 </head>
 
 <!--[if gte IE 8]><body class="ieLegacy"><![endif]-->
-<body>
+<!--[if !IE]><body><![endif]-->
     <header class="container">
         <nav>
             <ul>

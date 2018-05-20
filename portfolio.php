@@ -19,7 +19,7 @@ $projectContent = getProjectContent($db);
 </head>
 
 <!--[if gte IE 8]><body class="ieLegacy"><![endif]-->
-<body>
+<!--[if !IE]><body><![endif]-->
     <div>
         <header class="container">
             <nav>
