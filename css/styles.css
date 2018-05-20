@@ -247,6 +247,11 @@ main {
         height: 2rem;
     }
 
+    .portfolio a:hover {
+        border-bottom: solid;
+        border-color: #ffffff;
+    }
+
 }
 
 
