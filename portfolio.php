@@ -18,10 +18,8 @@ $projectContent = getProjectContent($db);
     <link type="text/css" rel="stylesheet" href="css/styles.css">
 </head>
 
-<!--[if lte IE 9]><body class="ieLegacy"><![endif]-->
+<!--[if gte IE 8]><body class="ieLegacy"><![endif]-->
 <!--[if !IE]><body><![endif]-->
-
-<body>
     <div>
         <header class="container">
             <nav>
