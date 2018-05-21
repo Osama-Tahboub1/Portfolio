@@ -1,6 +1,6 @@
 <?php
-
-$db = new PDO('mysql:host=127.0.0.1; dbname=osama_CMS', 'root');
+require_once 'settings.php';
+$db = new PDO("mysql:host=$dbHost; dbname=$dbName", "$dbUserName");
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
