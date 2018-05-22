@@ -1,6 +1,6 @@
 <?php
 require_once '../settings.php';
-$db = new PDO("mysql:host=$dbHost; dbname=$dbName", "$dbUserName");
+$db = new PDO("mysql:host=$dbHost; dbname=$dbName", $dbUserName, $dbPassword);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';

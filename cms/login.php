@@ -1,6 +1,6 @@
 <?php
 require_once '../settings.php';
-$db = new PDO("mysql:host=$dbHost; dbname=$dbName", "$dbUserName");
+$db = new PDO("mysql:host=$dbHost; dbname=$dbName", $dbUserName, $dbPassword);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 require_once 'functions.php';
@@ -38,7 +38,7 @@ if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inpu
     <form method="post" action="login.php">
         <input type="name" name="userName">
         <p></p>
-        <input type="name" name="password">
+        <input type="password" name="password">
         <p></p>
         <input type="submit" name="login" value="login">
     </form>
