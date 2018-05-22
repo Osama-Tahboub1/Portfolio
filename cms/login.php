@@ -38,7 +38,7 @@ if (isset($_POST['login']) && ($inputUserName !== empty($inputUserName) || $inpu
     <form method="post" action="login.php">
         <input type="name" name="userName">
         <p></p>
-        <input type="name" name="password">
+        <input type="password" name="password">
         <p></p>
         <input type="submit" name="login" value="login">
     </form>
